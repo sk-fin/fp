@@ -1,0 +1,32 @@
+.content-page {
+  padding-top: 120px;
+
+  & .header {
+    & .menu-button {
+      color: #ee1a2d;
+      & > .menu-button__icon, & > .menu-button__icon:after, & > .menu-button__icon:before {
+        background-color: #ee1a2d;
+      }
+
+    }
+
+    & .log-reg {
+      color: #ee1a2d;
+      & .log-reg__item_log::before {
+        background-position: 0px 0px;
+      }
+      .log-reg__item_reg::before {
+        background-position: -50px 0;
+      }
+    }
+    & .header-phn {
+      color: #686a6d;
+    }
+    &.header_active {
+      & > .menu-button__icon {
+        background-color: transparent;
+      }
+    }
+
+  }
+}
