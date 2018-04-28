@@ -24,101 +24,6 @@
     "application/json"
   ],
   "paths": {
-    "/list/fundStructureTypes": {
-      "get": {
-        "description": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $.",
-        "summary": "api/External/list/{listName}",
-        "tags": [
-          "!?@02>G=8:8"
-        ],
-        "operationId": "ListFundStructureTypesGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/~1list~1fundtypes"
-            },
-            "examples": {
-              "application/json": {
-                "listItem": [
-                  {
-                    "code": 1,
-                    "name": "$",
-                    "shortName": ">B:@KBK9"
-                  },
-                  {
-                    "code": 2,
-                    "name": "$",
-                    "shortName": "8=B5@20;L=K9"
-                  },
-                  {
-                    "code": 3,
-                    "name": "$",
-                    "shortName": "70:@KBK9"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/list/fundStructureTypes",
-              "headers": {
-                "Accept": "application/json"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "RAW",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Access-Control-Allow-Credentials": "true",
-                "Access-Control-Allow-Headers": "Authorization",
-                "Access-Control-Allow-Methods": "GET, OPTIONS",
-                "Connection": "keep-alive",
-                "Content-Length": "202",
-                "Content-Type": "application/json",
-                "Date": "Wed, 25 Apr 2018 14:36:18 GMT",
-                "Server": "nginx/1.10.3 (Ubuntu)"
-              },
-              "body": "{\"listItem\":[{\"code\":1,\"name\":\"$\",\"shortName\":\">B:@KBK9\"},{\"code\":2,\"name\":\"$\",\"shortName\":\"8=B5@20;L=K9\"},{\"code\":3,\"name\":\"$\",\"shortName\":\"70:@KBK9\"}]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "api/External/list/{listName}",
-            "x-testDescription": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $."
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
     "/funds": {
       "get": {
         "description": "### >;CG5=85 @55AB@0 $\n5B>4 2>72@0I05B <0AA82 4>ABC?=KE : ?@>4065 $.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| updateDate | `date`  | 0B0 >1=>2;5=8O $|\n| prtId | `int` | >4 >@30=870F88|\n| name | `string`  | >;=>5 =08<5=>20=85 $ | \n| shortName | `string`  | @0B:>5 =08<5=>20=85 $ | \n| type | `int` |"8? $.|\n| pageName | `string`  |4@5A 4;O AB@0=8FK $|\n| buyOnlineURL | `string`  | 4@5A 4;O :=>?:8 «C?8BL»|\n| dataDate | `date`  | 0B0 0:BC0;L=>3> (?>A;54=53>) ?>:070B5;O.|\n| navOne | `int` |!B>8<>ABL >4=>3> ?0O.|\n| navAll | `int` | 07<5@ !'.|\n| period | `int` |5@8>4 2 <5AOF0E, 70 :>B>@K9 @0AAG8B0=0 4>E>4=>ABL|\n| incomeOne | `int`| >E>4=>ABL 70 ?5@8>4 ?> AB>8<>AB8 >4=>3> ?0O|\n| navOnePrev | `int`| =0G5=85 AB>8<>AB8 ?0O, ?@54H5AB2CNI55 0:BC0;L=><C 7=0G5=8N ?>:070B5;O.|\n| navAllPrev | `int`| =0G5=85 @07<5@0 !', ?@54H5AB2CNI55 0:BC0;L=><C 7=0G5=8N ?>:070B5;O.|\n| dailyIncomeOne | `int`| =0G5=85 @0AG5B=>9 4>E>4=>AB8 ?> AB>8<>AB8 ?0O |\n| minInvestSum | `int`| 8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88|\n| minReInvestSum | `int` |8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88|\n| companyShortName | `string`| @0B:>5 =08<5=>20=85 C?@02;ONI59 :><?0=88| \n| companyName |`string`|>;=>5 =08<5=>20=85 C?@02;ONI59 :><?0=88| \n| logoURL |`string`|!AK;:0 =0 ;>3>B8? C?@02;ONI59 :><?0=88|",
@@ -161,7 +66,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Fund"
+                "$ref": "#/definitions/Funds21"
               }
             },
             "examples": {
@@ -453,24 +358,31 @@
         }
       }
     },
-    "/fund/{fundId}": {
+    "/fund/959": {
       "get": {
         "description": "### >;CG5=85 40==KE $\n5B>4 2>72@0I05B <0AA82 40==KE C:070==>3> $.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | "8? |?8A0=85|\n| --------- | ----------- | -----------|\n| id  | `int` |>4 $.|\n| updateDate  | `date` | 0B0 >1=>2;5=8O $. |\n| prtId  | `int` |45=B8D8:0B>@ #.|\n| name  | `string` | >;=>5 =08<5=>20=85 $ |\n| shortName  | `string` | @0B:>5 =08<5=>20=85 $ |\n| type  | `int` |"8? $.|\n| pageName  | `string` | 4@5A 4;O AB@0=8FK $ |\n| buyOnlineURL  | `string` | 4@5A 4;O :=>?:8 «C?8BL». |\n| shortDescr  | `string` | @0B:>5 >?8A0=85 A D>@<0B8@>20=85< HTML |\n| fullDescr  | `string` | >4@>1=>5 >?8A0=85 A D>@<0B8@>20=85< HTML|\n| advantages | `array` | 55AB@ 40==KE > ?@58<CI5AB20E $ |\n| fees | `array` | 55AB@ 40==KE > :><8AA8OE $ |\n| dataDate | `date` | 0B0 0:BC0;870F88 ?>:070B5;59 |\n| navAll | `int` | :BC0;L=0O AB>8<>ABL G8ABKE 0:B82>2 |\n| navOne | `int` |:BC0;L=0O AB>8<>ABL >4=>3> ?0O |\n| navOnePrev | `int` | 55AB@ 40==KE > $ 4;O >1<5=0 |\n| dailyIncomeOne | `int` |=0G5=85 @0AG5B=>9 4>E>4=>AB8 ?> AB>8<>AB8 ?0O  |\n| minInvestSum | `int` |8=8<0;L=0O AC<<0 4;O 8=25AB8F88.|\n| minReInvestSum | `int` |8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88.|\n| incomes | `array` | 55AB@ 40==KE > 4>E>4=>AB8 $ 70 @07;8G=K5 ?5@8>4K.|\n| structure | `array` |!B@C:BC@0 $.|\n| companyShortName | `string` |@0B:>5 =08<5=>20=85 #.|\n| companyName | `string` |>;=>5 =08<5=>20=85 #. |\n| logoURL | `string` |!AK;:0 =0 ;>3>B8? #.|",
         "summary": "api/External/fund/:fundId",
         "tags": [
           "$>=4K"
         ],
-        "operationId": "FundByFundIdGet",
+        "operationId": "Fund959Get",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
-            "name": "fundId",
-            "in": "path",
+            "name": "type",
+            "in": "query",
             "required": true,
             "type": "string",
-            "description": ">4 $"
+            "description": ""
+          },
+          {
+            "name": "company",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
           },
           {
             "name": "Accept",
@@ -602,7 +514,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/fund/957",
+              "uri": "/fund/959?type=&company=",
               "headers": {
                 "Accept": "application/json"
               }
@@ -1407,7 +1319,116 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Api~1external~1company~1291"
+            },
+            "examples": {
+              "application/json": {
+                "prtId": 291,
+                "updateDate": "2018-04-04T18:35:01",
+                "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                "shortName": " \"# \"@A035@0\"",
+                "pageName": "arsagera",
+                "description": "<div style=\"text-align: center;\"><font color=\"#ffffff\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>",
+                "logoURL": "site/org_291_logo.jpg",
+                "mainInformation": "<div style=\"text-align: justify;\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\r\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\"http://www.arsagera.ru\" target=\"_blank\">www.arsagera.ru</a></div>",
+                "addInformations": {
+                  "information": [
+                    {
+                      "header": "=D>@<0F8O > :><?0=88",
+                      "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+                    }
+                  ]
+                },
+                "products": {
+                  "funds": {
+                    "fund": [
+                      {
+                        "id": 1213,
+                        "updateDate": "2018-04-28T11:37:29",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+                        "type": 1,
+                        "pageName": "fond_smeshannyh_investicij",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 4959.9,
+                        "navAll": 132232148.75,
+                        "period": 12,
+                        "incomeOne": 20.12,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1214,
+                        "updateDate": "2018-04-28T11:36:11",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+                        "type": 1,
+                        "pageName": "fond_akcij",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 7136.98,
+                        "navAll": 421895130.97,
+                        "period": 12,
+                        "incomeOne": 20.77,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1252,
+                        "updateDate": "2018-04-28T11:34:25",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+                        "type": 1,
+                        "pageName": "fond_obligacij_kr_155",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 1579.29,
+                        "navAll": 59370976.35,
+                        "period": 12,
+                        "incomeOne": 10.41,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1220,
+                        "updateDate": "2018-04-18T17:53:54",
+                        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+                        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+                        "type": 2,
+                        "pageName": "akcii_64",
+                        "buyOnlineURL": "none",
+                        "dataDate": "2018-03-30",
+                        "navOne": 5728.85,
+                        "navAll": 386284599.81,
+                        "period": 12,
+                        "incomeOne": 22.67,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1251,
+                        "updateDate": "2018-04-18T17:38:05",
+                        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+                        "type": 2,
+                        "pageName": "akcii_mira",
+                        "buyOnlineURL": "none",
+                        "dataDate": "2018-03-30",
+                        "navOne": 1104.78,
+                        "navAll": 46125241.36,
+                        "period": 12,
+                        "incomeOne": 14.07,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
           }
         },
         "security": [
@@ -1426,11 +1447,23 @@
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
+              "x-bodyMatchMode": "RAW",
               "x-arrayOrderedMatching": false,
               "x-arrayCheckCount": false,
               "x-matchResponseSchema": true,
-              "headers": {}
+              "headers": {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Headers": "Authorization",
+                "Access-Control-Allow-Methods": "GET, OPTIONS",
+                "Connection": "keep-alive",
+                "Content-Encoding": "gzip",
+                "Content-Type": "application/json",
+                "Date": "Sat, 28 Apr 2018 11:10:53 GMT",
+                "Server": "nginx/1.10.3 (Ubuntu)",
+                "Transfer-Encoding": "chunked",
+                "Vary": "Accept-Encoding"
+              },
+              "body": "{\"prtId\":291,\"updateDate\":\"2018-04-04T18:35:01\",\"name\":\"?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \\\"#?@02;ONI0O :><?0=8O \\\"@A035@0\\\"\",\"shortName\":\" \\\"# \\\"@A035@0\\\"\",\"pageName\":\"arsagera\",\"description\":\"<div style=\\\"text-align: center;\\\"><font color=\\\"#ffffff\\\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>\",\"logoURL\":\"site/org_291_logo.jpg\",\"mainInformation\":\"<div style=\\\"text-align: justify;\\\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\\r\\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\\\"http://www.arsagera.ru\\\" target=\\\"_blank\\\">www.arsagera.ru</a></div>\",\"addInformations\":{\"information\":[{\"header\":\"=D>@<0F8O > :><?0=88\",\"content\":\"<div style=\\\"text-align: justify;\\\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>\"}]},\"products\":{\"funds\":{\"fund\":[{\"id\":1213,\"updateDate\":\"2018-04-28T11:37:29\",\"name\":\">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\\\"\",\"shortName\":\"$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - !\\\"\",\"type\":1,\"pageName\":\"fond_smeshannyh_investicij\",\"buyOnlineURL\":\"https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=\",\"dataDate\":\"2018-04-26\",\"navOne\":4959.9,\"navAll\":132232148.75,\"period\":12,\"incomeOne\":20.12,\"minInvestSum\":1000.0,\"minReInvestSum\":1000.0},{\"id\":1214,\"updateDate\":\"2018-04-28T11:36:11\",\"name\":\">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - D>=4 0:F89\\\"\",\"shortName\":\"$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - $\\\"\",\"type\":1,\"pageName\":\"fond_akcij\",\"buyOnlineURL\":\"https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=\",\"dataDate\":\"2018-04-26\",\"navOne\":7136.98,\"navAll\":421895130.97,\"period\":12,\"incomeOne\":20.77,\"minInvestSum\":1000.0,\"minReInvestSum\":1000.0},{\"id\":1252,\"updateDate\":\"2018-04-28T11:34:25\",\"name\":\">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - D>=4 >1;830F89   1.55\\\"\",\"shortName\":\"$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 -   1.55\\\"\",\"type\":1,\"pageName\":\"fond_obligacij_kr_155\",\"buyOnlineURL\":\"https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=\",\"dataDate\":\"2018-04-26\",\"navOne\":1579.29,\"navAll\":59370976.35,\"period\":12,\"incomeOne\":10.41,\"minInvestSum\":1000.0,\"minReInvestSum\":1000.0},{\"id\":1220,\"updateDate\":\"2018-04-18T17:53:54\",\"name\":\"=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \\\"@A035@0 - 0:F88 6.4\\\"\",\"shortName\":\"$ \\\"@A035@0-0:F88 6.4\\\"\",\"type\":2,\"pageName\":\"akcii_64\",\"buyOnlineURL\":\"none\",\"dataDate\":\"2018-03-30\",\"navOne\":5728.85,\"navAll\":386284599.81,\"period\":12,\"incomeOne\":22.67,\"minInvestSum\":1000.0,\"minReInvestSum\":1000.0},{\"id\":1251,\"updateDate\":\"2018-04-18T17:38:05\",\"name\":\"=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - 0:F88 8@0\\\"\",\"shortName\":\"$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \\\"@A035@0 - \\\"\",\"type\":2,\"pageName\":\"akcii_mira\",\"buyOnlineURL\":\"none\",\"dataDate\":\"2018-03-30\",\"navOne\":1104.78,\"navAll\":46125241.36,\"period\":12,\"incomeOne\":14.07,\"minInvestSum\":1000.0,\"minReInvestSum\":1000.0}]}}}"
             },
             "x-testShouldPass": true,
             "x-testEnabled": true,
@@ -1528,7 +1561,7 @@
     "/investors/{prtld}": {
       "get": {
         "description": "### >;CG5=85 40==KE 8=25AB>@0\n5B>4 4;O ?>;CG5=8O 8=D>@<0F88 ?@>D8;O 8=25AB>@0.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0",
-        "summary": "/api/External/investors/{prtld}",
+        "summary": "/api/External/investors/:prtld",
         "tags": [
           "=25AB>@K"
         ],
@@ -1538,15 +1571,15 @@
         ],
         "parameters": [
           {
-            "name": "Accept",
-            "in": "header",
+            "name": "prtld",
+            "in": "path",
             "required": true,
             "type": "string",
             "description": ""
           },
           {
-            "name": "prtld",
-            "in": "path",
+            "name": "Accept",
+            "in": "header",
             "required": true,
             "type": "string",
             "description": ""
@@ -1562,7 +1595,29 @@
             "auth": []
           }
         ],
-        "x-unitTests": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/investors/",
+              "headers": {
+                "Accept": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/api/External/investors/:prtld",
+            "x-testDescription": "### >;CG5=85 40==KE 8=25AB>@0\n5B>4 4;O ?>;CG5=8O 8=D>@<0F88 ?@>D8;O 8=25AB>@0.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0"
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1572,7 +1627,7 @@
       },
       "post": {
         "description": "5B>4 4;O >1=>2;5=8O 8=D>@<0F88 ?@>D8;O.",
-        "summary": "/api/External/investors/{prtld}",
+        "summary": "/api/External/investors/:prtld",
         "tags": [
           "=25AB>@K"
         ],
@@ -1582,12 +1637,19 @@
         ],
         "parameters": [
           {
+            "name": "prtld",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Body",
             "in": "body",
             "required": true,
             "description": "",
             "schema": {
-              "$ref": "#/definitions/~1api~1external~1investors~1{prtld}request"
+              "$ref": "#/definitions/~1api~1external~1investors~1:prtldrequest"
             }
           },
           {
@@ -1603,13 +1665,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "prtld",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1622,7 +1677,31 @@
             "auth": []
           }
         ],
-        "x-unitTests": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/investors/",
+              "headers": {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+              },
+              "body": "{\"ClientCurrencyId\":0,\"ClientCountryId\":0,\"UiLanguageId\":0,\"Name\":\"string\",\"Address\":\"string\",\"Email\":\"string\",\"CC\":\"string\",\"PhoneNumber\":\"string\",\"Vat\":\"string\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/api/External/investors/:prtld1",
+            "x-testDescription": "5B>4 4;O >1=>2;5=8O 8=D>@<0F88 ?@>D8;O."
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1699,14 +1778,14 @@
         }
       }
     },
-    "/investors/1228/documents": {
+    "/investors/{prtld}/documents": {
       "get": {
         "description": "5B>4 4;O ?>;CG5=8O @55AB@0 4>:C<5=B>2 8=25AB>@0. 5B>4 8A?>;L7C5B ?>AB@0=8G=CN @07182:C @57C;LB0B0 2 >B25B5.",
-        "summary": "/api/External/investors/{prtId}/documents",
+        "summary": "/api/External/investors/:prtld/documents",
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "Investors1228DocumentsGet",
+        "operationId": "InvestorsDocumentsByPrtldGet",
         "produces": [
           "application/json"
         ],
@@ -1803,6 +1882,13 @@
             "description": ""
           },
           {
+            "name": "prtld",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
             "name": "Accept",
             "in": "header",
             "required": true,
@@ -1824,7 +1910,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/investors/1228/documents?status=&dir=&type=&begDate=&endDate=&fundId=&orgName[like]=&fundName[like\n]=&num[like]=&sortBy=&page=&pageSize=&extFields=",
+              "uri": "/investors//documents?status=&dir=&type=&begDate=&endDate=&fundId=&orgName[like]=&fundName[like\n]=&num[like]=&sortBy=&page=&pageSize=&extFields=",
               "headers": {
                 "Accept": "application/json"
               }
@@ -1839,7 +1925,7 @@
             },
             "x-testShouldPass": true,
             "x-testEnabled": true,
-            "x-testName": "/api/External/investors/{prtId}/documents",
+            "x-testName": "/api/External/investors/:prtld/documents",
             "x-testDescription": "5B>4 4;O ?>;CG5=8O @55AB@0 4>:C<5=B>2 8=25AB>@0. 5B>4 8A?>;L7C5B ?>AB@0=8G=CN @07182:C @57C;LB0B0 2 >B25B5."
           }
         ],
@@ -2030,93 +2116,70 @@
           "IsMultiContentStreaming": false
         }
       }
+    },
+    "/list/fundStructureTypes": {
+      "get": {
+        "description": ">;CG5=85 40==KE A?@02>G=8:0:\n* `fundTypes`\t- B8?K $\n* `fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $\n",
+        "summary": "/api/External/list/{listName}",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "ListFundStructureTypesGet2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/list/fundStructureTypes",
+              "headers": {
+                "Accept": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/api/External/list/{listName}",
+            "x-testDescription": ">;CG5=85 40==KE A?@02>G=8:0:\n* `fundTypes`\t- B8?K $\n* `fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $\n"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
     }
   },
   "definitions": {
-    "/list/fundtypes": {
-      "title": "/list/fundTypes",
-      "example": {
-        "listItem": [
-          {
-            "code": 1,
-            "name": "$",
-            "shortName": ">B:@KBK9"
-          },
-          {
-            "code": 2,
-            "name": "$",
-            "shortName": "8=B5@20;L=K9"
-          },
-          {
-            "code": 3,
-            "name": "$",
-            "shortName": "70:@KBK9"
-          }
-        ]
-      },
-      "type": "object",
-      "properties": {
-        "listItem": {
-          "description": "",
-          "example": [
-            {
-              "code": 1,
-              "name": "$",
-              "shortName": ">B:@KBK9"
-            },
-            {
-              "code": 2,
-              "name": "$",
-              "shortName": "8=B5@20;L=K9"
-            },
-            {
-              "code": 3,
-              "name": "$",
-              "shortName": "70:@KBK9"
-            }
-          ],
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ListItem"
-          }
-        }
-      },
-      "required": [
-        "listItem"
-      ]
-    },
-    "ListItem": {
-      "title": "ListItem",
-      "example": {
-        "code": 1,
-        "name": "$",
-        "shortName": ">B:@KBK9"
-      },
-      "type": "object",
-      "properties": {
-        "code": {
-          "description": "",
-          "example": 1,
-          "type": "integer",
-          "format": "int32"
-        },
-        "name": {
-          "description": "",
-          "example": "$",
-          "type": "string"
-        },
-        "shortName": {
-          "description": "",
-          "example": ">B:@KBK9",
-          "type": "string"
-        }
-      },
-      "required": [
-        "code",
-        "name",
-        "shortName"
-      ]
-    },
     "Fund": {
       "title": "fund",
       "example": {
@@ -3013,6 +3076,794 @@
         "logoURL"
       ]
     },
+    "Api/external/company/291": {
+      "title": "api/External/company/291",
+      "example": {
+        "prtId": 291,
+        "updateDate": "2018-04-04T18:35:01",
+        "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "shortName": " \"# \"@A035@0\"",
+        "pageName": "arsagera",
+        "description": "<div style=\"text-align: center;\"><font color=\"#ffffff\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>",
+        "logoURL": "site/org_291_logo.jpg",
+        "mainInformation": "<div style=\"text-align: justify;\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\r\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\"http://www.arsagera.ru\" target=\"_blank\">www.arsagera.ru</a></div>",
+        "addInformations": {
+          "information": [
+            {
+              "header": "=D>@<0F8O > :><?0=88",
+              "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+            }
+          ]
+        },
+        "products": {
+          "funds": {
+            "fund": [
+              {
+                "id": 1213,
+                "updateDate": "2018-04-28T11:37:29",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+                "type": 1,
+                "pageName": "fond_smeshannyh_investicij",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 4959.9,
+                "navAll": 132232148.75,
+                "period": 12,
+                "incomeOne": 20.12,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1214,
+                "updateDate": "2018-04-28T11:36:11",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+                "type": 1,
+                "pageName": "fond_akcij",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 7136.98,
+                "navAll": 421895130.97,
+                "period": 12,
+                "incomeOne": 20.77,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1252,
+                "updateDate": "2018-04-28T11:34:25",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+                "type": 1,
+                "pageName": "fond_obligacij_kr_155",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 1579.29,
+                "navAll": 59370976.35,
+                "period": 12,
+                "incomeOne": 10.41,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1220,
+                "updateDate": "2018-04-18T17:53:54",
+                "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+                "shortName": "$ \"@A035@0-0:F88 6.4\"",
+                "type": 2,
+                "pageName": "akcii_64",
+                "buyOnlineURL": "none",
+                "dataDate": "2018-03-30",
+                "navOne": 5728.85,
+                "navAll": 386284599.81,
+                "period": 12,
+                "incomeOne": 22.67,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1251,
+                "updateDate": "2018-04-18T17:38:05",
+                "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+                "type": 2,
+                "pageName": "akcii_mira",
+                "buyOnlineURL": "none",
+                "dataDate": "2018-03-30",
+                "navOne": 1104.78,
+                "navAll": 46125241.36,
+                "period": 12,
+                "incomeOne": 14.07,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              }
+            ]
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "prtId": {
+          "description": "",
+          "example": 291,
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "description": "",
+          "example": "4/4/2018 6:35:01 PM",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "example": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "",
+          "example": " \"# \"@A035@0\"",
+          "type": "string"
+        },
+        "pageName": {
+          "description": "",
+          "example": "arsagera",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "example": "<div style=\"text-align: center;\"><font color=\"#ffffff\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>",
+          "type": "string"
+        },
+        "logoURL": {
+          "description": "",
+          "example": "site/org_291_logo.jpg",
+          "type": "string"
+        },
+        "mainInformation": {
+          "description": "",
+          "example": "<div style=\"text-align: justify;\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\r\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\"http://www.arsagera.ru\" target=\"_blank\">www.arsagera.ru</a></div>",
+          "type": "string"
+        },
+        "addInformations": {
+          "$ref": "#/definitions/AddInformations"
+        },
+        "products": {
+          "$ref": "#/definitions/Products"
+        }
+      },
+      "required": [
+        "prtId",
+        "updateDate",
+        "name",
+        "shortName",
+        "pageName",
+        "description",
+        "logoURL",
+        "mainInformation",
+        "addInformations",
+        "products"
+      ]
+    },
+    "AddInformations": {
+      "title": "AddInformations",
+      "example": {
+        "information": [
+          {
+            "header": "=D>@<0F8O > :><?0=88",
+            "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "information": {
+          "description": "",
+          "example": [
+            {
+              "header": "=D>@<0F8O > :><?0=88",
+              "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+            }
+          ],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Information"
+          }
+        }
+      },
+      "required": [
+        "information"
+      ]
+    },
+    "Information": {
+      "title": "Information",
+      "example": {
+        "header": "=D>@<0F8O > :><?0=88",
+        "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+      },
+      "type": "object",
+      "properties": {
+        "header": {
+          "description": "",
+          "example": "=D>@<0F8O > :><?0=88",
+          "type": "string"
+        },
+        "content": {
+          "description": "",
+          "example": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>",
+          "type": "string"
+        }
+      },
+      "required": [
+        "header",
+        "content"
+      ]
+    },
+    "Products": {
+      "title": "Products",
+      "example": {
+        "funds": {
+          "fund": [
+            {
+              "id": 1213,
+              "updateDate": "2018-04-28T11:37:29",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+              "type": 1,
+              "pageName": "fond_smeshannyh_investicij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 4959.9,
+              "navAll": 132232148.75,
+              "period": 12,
+              "incomeOne": 20.12,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1214,
+              "updateDate": "2018-04-28T11:36:11",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+              "type": 1,
+              "pageName": "fond_akcij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 7136.98,
+              "navAll": 421895130.97,
+              "period": 12,
+              "incomeOne": 20.77,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1252,
+              "updateDate": "2018-04-28T11:34:25",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+              "type": 1,
+              "pageName": "fond_obligacij_kr_155",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 1579.29,
+              "navAll": 59370976.35,
+              "period": 12,
+              "incomeOne": 10.41,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1220,
+              "updateDate": "2018-04-18T17:53:54",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+              "shortName": "$ \"@A035@0-0:F88 6.4\"",
+              "type": 2,
+              "pageName": "akcii_64",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 5728.85,
+              "navAll": 386284599.81,
+              "period": 12,
+              "incomeOne": 22.67,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1251,
+              "updateDate": "2018-04-18T17:38:05",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+              "type": 2,
+              "pageName": "akcii_mira",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 1104.78,
+              "navAll": 46125241.36,
+              "period": 12,
+              "incomeOne": 14.07,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "funds": {
+          "$ref": "#/definitions/Funds"
+        }
+      },
+      "required": [
+        "funds"
+      ]
+    },
+    "Funds": {
+      "title": "Funds",
+      "example": {
+        "fund": [
+          {
+            "id": 1213,
+            "updateDate": "2018-04-28T11:37:29",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+            "type": 1,
+            "pageName": "fond_smeshannyh_investicij",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 4959.9,
+            "navAll": 132232148.75,
+            "period": 12,
+            "incomeOne": 20.12,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1214,
+            "updateDate": "2018-04-28T11:36:11",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+            "type": 1,
+            "pageName": "fond_akcij",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 7136.98,
+            "navAll": 421895130.97,
+            "period": 12,
+            "incomeOne": 20.77,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1252,
+            "updateDate": "2018-04-28T11:34:25",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+            "type": 1,
+            "pageName": "fond_obligacij_kr_155",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 1579.29,
+            "navAll": 59370976.35,
+            "period": 12,
+            "incomeOne": 10.41,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1220,
+            "updateDate": "2018-04-18T17:53:54",
+            "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+            "shortName": "$ \"@A035@0-0:F88 6.4\"",
+            "type": 2,
+            "pageName": "akcii_64",
+            "buyOnlineURL": "none",
+            "dataDate": "2018-03-30",
+            "navOne": 5728.85,
+            "navAll": 386284599.81,
+            "period": 12,
+            "incomeOne": 22.67,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1251,
+            "updateDate": "2018-04-18T17:38:05",
+            "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+            "type": 2,
+            "pageName": "akcii_mira",
+            "buyOnlineURL": "none",
+            "dataDate": "2018-03-30",
+            "navOne": 1104.78,
+            "navAll": 46125241.36,
+            "period": 12,
+            "incomeOne": 14.07,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "fund": {
+          "description": "",
+          "example": [
+            {
+              "id": 1213,
+              "updateDate": "2018-04-28T11:37:29",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+              "type": 1,
+              "pageName": "fond_smeshannyh_investicij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 4959.9,
+              "navAll": 132232148.75,
+              "period": 12,
+              "incomeOne": 20.12,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1214,
+              "updateDate": "2018-04-28T11:36:11",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+              "type": 1,
+              "pageName": "fond_akcij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 7136.98,
+              "navAll": 421895130.97,
+              "period": 12,
+              "incomeOne": 20.77,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1252,
+              "updateDate": "2018-04-28T11:34:25",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+              "type": 1,
+              "pageName": "fond_obligacij_kr_155",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 1579.29,
+              "navAll": 59370976.35,
+              "period": 12,
+              "incomeOne": 10.41,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1220,
+              "updateDate": "2018-04-18T17:53:54",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+              "shortName": "$ \"@A035@0-0:F88 6.4\"",
+              "type": 2,
+              "pageName": "akcii_64",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 5728.85,
+              "navAll": 386284599.81,
+              "period": 12,
+              "incomeOne": 22.67,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1251,
+              "updateDate": "2018-04-18T17:38:05",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+              "type": 2,
+              "pageName": "akcii_mira",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 1104.78,
+              "navAll": 46125241.36,
+              "period": 12,
+              "incomeOne": 14.07,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            }
+          ],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Fund20"
+          }
+        }
+      },
+      "required": [
+        "fund"
+      ]
+    },
+    "Fund20": {
+      "title": "Fund20",
+      "example": {
+        "id": 1213,
+        "updateDate": "2018-04-28T11:37:29",
+        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+        "type": 1,
+        "pageName": "fond_smeshannyh_investicij",
+        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+        "dataDate": "2018-04-26",
+        "navOne": 4959.9,
+        "navAll": 132232148.75,
+        "period": 12,
+        "incomeOne": 20.12,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "example": 1213,
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "description": "",
+          "example": "4/28/2018 11:37:29 AM",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "example": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "",
+          "example": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+          "type": "string"
+        },
+        "type": {
+          "description": "",
+          "example": 1,
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "description": "",
+          "example": "fond_smeshannyh_investicij",
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "description": "",
+          "example": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+          "type": "string"
+        },
+        "dataDate": {
+          "description": "",
+          "example": "2018-04-26",
+          "type": "string"
+        },
+        "navOne": {
+          "description": "",
+          "example": 4959.9,
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "description": "",
+          "example": 132232148.75,
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "description": "",
+          "example": 12,
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "description": "",
+          "example": 20.12,
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "description": "",
+          "example": 1000,
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "description": "",
+          "example": 1000,
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "minInvestSum",
+        "minReInvestSum"
+      ]
+    },
+    "Funds21": {
+      "title": "funds21",
+      "example": {
+        "id": 1220,
+        "updateDate": "2018-04-18T17:53:54",
+        "prtId": 291,
+        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+        "type": 2,
+        "pageName": "akcii_64",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-03-30",
+        "navOne": 5728.85,
+        "navAll": 386284599.81,
+        "period": 12,
+        "incomeOne": 22.67,
+        "navOnePrev": 5775.02,
+        "navAllPrev": 385679568.73,
+        "dailyIncomeOne": -0.8,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0,
+        "companyShortName": " \"# \"@A035@0\"",
+        "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "example": 1220,
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "description": "",
+          "example": "4/18/2018 5:53:54 PM",
+          "type": "string"
+        },
+        "prtId": {
+          "description": "",
+          "example": 291,
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "description": "",
+          "example": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "",
+          "example": "$ \"@A035@0-0:F88 6.4\"",
+          "type": "string"
+        },
+        "type": {
+          "description": "",
+          "example": 2,
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "description": "",
+          "example": "akcii_64",
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "description": "",
+          "example": "none",
+          "type": "string"
+        },
+        "dataDate": {
+          "description": "",
+          "example": "2018-03-30",
+          "type": "string"
+        },
+        "navOne": {
+          "description": "",
+          "example": 5728.85,
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "description": "",
+          "example": 386284599.81,
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "description": "",
+          "example": 12,
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "description": "",
+          "example": 22.67,
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "description": "",
+          "example": 5775.02,
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "description": "",
+          "example": 385679568.73,
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "description": "",
+          "example": -0.8,
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "description": "",
+          "example": 1000,
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "description": "",
+          "example": 1000,
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "description": "",
+          "example": " \"# \"@A035@0\"",
+          "type": "string"
+        },
+        "companyName": {
+          "description": "",
+          "example": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+          "type": "string"
+        },
+        "logoURL": {
+          "description": "",
+          "example": "site/org_291_logo.jpg",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
     "/api/external/investors/createrequest": {
       "title": "/api/External/investors/createRequest",
       "example": {
@@ -3089,8 +3940,8 @@
         "Vat"
       ]
     },
-    "/api/external/investors/{prtld}request": {
-      "title": "/api/External/investors/{prtld}Request",
+    "/api/external/investors/:prtldrequest": {
+      "title": "/api/External/investors/:prtldRequest",
       "example": {
         "ClientCurrencyId": 0,
         "ClientCountryId": 0,
@@ -3163,6 +4014,90 @@
         "CC",
         "PhoneNumber",
         "Vat"
+      ]
+    },
+    "/list/fundtypes": {
+      "title": "/list/fundTypes",
+      "example": {
+        "listItem": [
+          {
+            "code": 1,
+            "name": "$",
+            "shortName": ">B:@KBK9"
+          },
+          {
+            "code": 2,
+            "name": "$",
+            "shortName": "8=B5@20;L=K9"
+          },
+          {
+            "code": 3,
+            "name": "$",
+            "shortName": "70:@KBK9"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "listItem": {
+          "description": "",
+          "example": [
+            {
+              "code": 1,
+              "name": "$",
+              "shortName": ">B:@KBK9"
+            },
+            {
+              "code": 2,
+              "name": "$",
+              "shortName": "8=B5@20;L=K9"
+            },
+            {
+              "code": 3,
+              "name": "$",
+              "shortName": "70:@KBK9"
+            }
+          ],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ListItem"
+          }
+        }
+      },
+      "required": [
+        "listItem"
+      ]
+    },
+    "ListItem": {
+      "title": "ListItem",
+      "example": {
+        "code": 1,
+        "name": "$",
+        "shortName": ">B:@KBK9"
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "example": 1,
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "description": "",
+          "example": "$",
+          "type": "string"
+        },
+        "shortName": {
+          "description": "",
+          "example": ">B:@KBK9",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "shortName"
       ]
     }
   }
