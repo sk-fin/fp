@@ -1175,6 +1175,90 @@
         }
       }
     },
+    "/bidFund": {
+      "get": {
+        "description": "\t",
+        "summary": "/api/External/bidFund",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "BidFundGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "fundId",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/bidFund?action=check&type=8&fundId=959",
+              "headers": {
+                "Accept": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "/api/External/bidFund",
+            "x-testDescription": "\t"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
     "/companies": {
       "get": {
         "description": "### >;CG5=85 @55AB@0 >@30=870F89\n5B>4 2>72@0I05B >B25B, A>45@60I89 XML 4>:C<5=B 8;8 JSON >1J5:B 2 :>B>@>< ?5@5405BAO @55AB@ >@30=870F89.\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| prtId | `int` | >4 >@30=870F88|\n| updateDate | `date`  | 0B0 >1=>2;5=8O >@30=870F88|\n| name | `string`  | >;=>5 =08<5=>20=85 >@30=870F88|\n| shortName | `string`  |@0B:>5 =08<5=>20=85 >@30=870F88|\n| pageName | `string`  | 4@5A 4;O AB@0=8FK >@30=870F88|\n| logoURL | `string`  | !AK;:0 =0 ;>3>B8? >@30=870F88|",
@@ -2033,98 +2117,14 @@
         }
       }
     },
-    "/bidFund": {
-      "get": {
-        "description": "\t",
-        "summary": "/api/External/bidFund",
-        "tags": [
-          "=25AB>@K"
-        ],
-        "operationId": "BidFundGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "action",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "fundId",
-            "in": "query",
-            "required": true,
-            "type": "integer",
-            "format": "int32",
-            "description": ""
-          },
-          {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/bidFund?action=check&type=8&fundId=959",
-              "headers": {
-                "Accept": "application/json"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "/api/External/bidFund",
-            "x-testDescription": "\t"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
     "/list/fundStructureTypes": {
       "get": {
-        "description": ">;CG5=85 40==KE A?@02>G=8:0:\n* `fundTypes`\t- B8?K $\n* `fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $\n",
-        "summary": "/api/External/list/{listName}",
+        "description": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $.",
+        "summary": "api/External/list/{listName}",
         "tags": [
-          "Misc"
+          "!?@02>G=8:8"
         ],
-        "operationId": "ListFundStructureTypesGet2",
+        "operationId": "ListFundStructureTypesGet",
         "produces": [
           "application/json"
         ],
@@ -2139,7 +2139,31 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1list~1fundtypes"
+            },
+            "examples": {
+              "application/json": {
+                "listItem": [
+                  {
+                    "code": 1,
+                    "name": "$",
+                    "shortName": ">B:@KBK9"
+                  },
+                  {
+                    "code": 2,
+                    "name": "$",
+                    "shortName": "8=B5@20;L=K9"
+                  },
+                  {
+                    "code": 3,
+                    "name": "$",
+                    "shortName": "70:@KBK9"
+                  }
+                ]
+              }
+            }
           }
         },
         "security": [
@@ -2152,6 +2176,84 @@
             "request": {
               "method": "GET",
               "uri": "/list/fundStructureTypes",
+              "headers": {
+                "Accept": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Headers": "Authorization",
+                "Access-Control-Allow-Methods": "GET, OPTIONS",
+                "Connection": "keep-alive",
+                "Content-Length": "202",
+                "Content-Type": "application/json",
+                "Date": "Wed, 25 Apr 2018 14:36:18 GMT",
+                "Server": "nginx/1.10.3 (Ubuntu)"
+              },
+              "body": "{\"listItem\":[{\"code\":1,\"name\":\"$\",\"shortName\":\">B:@KBK9\"},{\"code\":2,\"name\":\"$\",\"shortName\":\"8=B5@20;L=K9\"},{\"code\":3,\"name\":\"$\",\"shortName\":\"70:@KBK9\"}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "api/External/list/{listName}",
+            "x-testDescription": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/list/{listname}": {
+      "get": {
+        "description": ">;CG5=85 40==KE A?@02>G=8:0:\n* `fundTypes`\t- B8?K $\n* `fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $\n",
+        "summary": "/api/External/list/{listName}",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "ListByListnameGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "listname",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "0720=85 A?@02>G=8:0. >ABC?=K5 7=0G5=8O: `fundTypes` ,`fundStructureTypes`"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/list/fundStructureTypes%20",
               "headers": {
                 "Accept": "application/json"
               }
