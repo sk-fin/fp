@@ -682,7 +682,7 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": ""
+            "description": "45=B8D8:0B>@ $"
           },
           {
             "name": "Accept",
@@ -2117,101 +2117,6 @@
         }
       }
     },
-    "/list/fundStructureTypes": {
-      "get": {
-        "description": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $.",
-        "summary": "api/External/list/{listName}",
-        "tags": [
-          "!?@02>G=8:8"
-        ],
-        "operationId": "ListFundStructureTypesGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/~1list~1fundtypes"
-            },
-            "examples": {
-              "application/json": {
-                "listItem": [
-                  {
-                    "code": 1,
-                    "name": "$",
-                    "shortName": ">B:@KBK9"
-                  },
-                  {
-                    "code": 2,
-                    "name": "$",
-                    "shortName": "8=B5@20;L=K9"
-                  },
-                  {
-                    "code": 3,
-                    "name": "$",
-                    "shortName": "70:@KBK9"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/list/fundStructureTypes",
-              "headers": {
-                "Accept": "application/json"
-              }
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "RAW",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {
-                "Access-Control-Allow-Credentials": "true",
-                "Access-Control-Allow-Headers": "Authorization",
-                "Access-Control-Allow-Methods": "GET, OPTIONS",
-                "Connection": "keep-alive",
-                "Content-Length": "202",
-                "Content-Type": "application/json",
-                "Date": "Wed, 25 Apr 2018 14:36:18 GMT",
-                "Server": "nginx/1.10.3 (Ubuntu)"
-              },
-              "body": "{\"listItem\":[{\"code\":1,\"name\":\"$\",\"shortName\":\">B:@KBK9\"},{\"code\":2,\"name\":\"$\",\"shortName\":\"8=B5@20;L=K9\"},{\"code\":3,\"name\":\"$\",\"shortName\":\"70:@KBK9\"}]}"
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "api/External/list/{listName}",
-            "x-testDescription": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $."
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
     "/list/{listname}": {
       "get": {
         "description": ">;CG5=85 40==KE A?@02>G=8:0:\n* `fundTypes`\t- B8?K $\n* `fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $\n",
@@ -2219,7 +2124,7 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "ListByListnameGet",
+        "operationId": "ListByListnameGet2",
         "produces": [
           "application/json"
         ],
