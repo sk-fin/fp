@@ -1576,15 +1576,6 @@
         ],
         "parameters": [
           {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/~1api~1external~1investors~1createrequest"
-            }
-          },
-          {
             "name": "Accept",
             "in": "header",
             "required": true,
@@ -1597,6 +1588,15 @@
             "required": true,
             "type": "string",
             "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1api~1external~1investors~1createrequest"
+            }
           }
         ],
         "responses": {
@@ -1615,8 +1615,8 @@
               "method": "POST",
               "uri": "/investors/create",
               "headers": {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Accept": "application/json",
+                "Content-Type": "application/json"
               },
               "body": "{\"ClientCurrencyId\":0,\"ClientCountryId\":0,\"UiLanguageId\":0,\"Name\":\"string\",\"Address\":\"string\",\"Email\":\"string\",\"CC\":\"string\",\"PhoneNumber\":\"string\",\"Vat\":\"string\"}"
             },
@@ -1728,15 +1728,6 @@
             "description": ""
           },
           {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/~1api~1external~1investors~1:prtldrequest"
-            }
-          },
-          {
             "name": "Accept",
             "in": "header",
             "required": true,
@@ -1749,6 +1740,15 @@
             "required": true,
             "type": "string",
             "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1api~1external~1investors~1:prtldrequest"
+            }
           }
         ],
         "responses": {
@@ -1767,8 +1767,8 @@
               "method": "POST",
               "uri": "/investors/",
               "headers": {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Accept": "application/json",
+                "Content-Type": "application/json"
               },
               "body": "{\"ClientCurrencyId\":0,\"ClientCountryId\":0,\"UiLanguageId\":0,\"Name\":\"string\",\"Address\":\"string\",\"Email\":\"string\",\"CC\":\"string\",\"PhoneNumber\":\"string\",\"Vat\":\"string\"}"
             },
