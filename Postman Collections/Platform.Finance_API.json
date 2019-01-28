@@ -2809,28 +2809,28 @@
   ],
   "variable": [
     {
-      "id": "f3effbf4-6df0-483f-81aa-871584d58a8a",
+      "id": "f22295dd-2367-40e3-954c-f252132f4b5f",
       "key": "domain",
       "value": "https://platform.finance",
       "type": "string",
       "description": ""
     },
     {
-      "id": "6dc16f5b-9d63-4626-841d-4404bb4fe9a4",
+      "id": "a3ea7c8c-a4bd-4a71-a423-ac1d74497830",
       "key": "company",
       "value": "125",
       "type": "string",
       "description": ""
     },
     {
-      "id": "bb40b9a8-2293-4e9e-bb89-e0301e286704",
+      "id": "820d985b-625d-45a8-98e8-afebfb5aeea5",
       "key": "fund",
       "value": "835",
       "type": "string",
       "description": ""
     },
     {
-      "id": "5be28fbb-31d1-4722-99cd-7f0688a05620",
+      "id": "d73b2f12-c983-482d-8d54-5f29e88abe0d",
       "key": "investor",
       "value": "12546",
       "type": "string",
