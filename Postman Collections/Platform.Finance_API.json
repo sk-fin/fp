@@ -7,13 +7,11 @@
   },
   "item": [
     {
-      "_postman_id": "4216768-121188fd-b5f4-40cb-fc5d-8e76a2328019",
       "name": "$>=4K",
-      "description": "#### $>=4K\n\n\n",
       "item": [
         {
-          "_postman_id": "4216768-059a9dd6-2f7c-41c7-9444-705477856e91",
           "name": "api/External/funds",
+          "_postman_id": "4216768-059a9dd6-2f7c-41c7-9444-705477856e91",
           "request": {
             "auth": {
               "type": "basic",
@@ -36,7 +34,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/funds?type=1&company=169",
               "protocol": "https",
@@ -53,13 +54,11 @@
                 {
                   "key": "type",
                   "value": "1",
-                  "equals": true,
                   "description": ""8? $. >ABC?=K5 7=0G5=8O >?@545;ONBAO A?@02>G=8:>< B8?>2 D8=0=A>2KE ?@>4C:B>2."
                 },
                 {
                   "key": "company",
                   "value": "169",
-                  "equals": true,
                   "description": "45=B8D8:0B>@ >@30=870F88.  :0G5AB25 845=B8D8:0B>@0 <>65B ?5@54020BLAO :>4 >@30=870F88 8;8 04@5A AB@0=8FK >@30=870F88 (?0@0<5B@K prtId 8 pageName A>>B25BAB25==>, 2>72@0I05<K5 <5B>4>< «>;CG5=85 @55AB@0 >@30=870F89»)."
                 }
               ]
@@ -80,7 +79,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/funds?type=3&company=169",
                   "protocol": "https",
@@ -97,13 +99,11 @@
                     {
                       "key": "type",
                       "value": "3",
-                      "equals": true,
                       "description": ""8? $"
                     },
                     {
                       "key": "company",
-                      "value": "169",
-                      "equals": true
+                      "value": "169"
                     }
                   ]
                 }
@@ -220,7 +220,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/funds?company=169",
                   "protocol": "https",
@@ -236,14 +239,12 @@
                   "query": [
                     {
                       "key": "type",
-                      "value": "",
-                      "equals": false,
+                      "value": null,
                       "disabled": true
                     },
                     {
                       "key": "company",
-                      "value": "169",
-                      "equals": true
+                      "value": "169"
                     }
                   ]
                 }
@@ -360,7 +361,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/funds?type=2",
                   "protocol": "https",
@@ -376,13 +380,11 @@
                   "query": [
                     {
                       "key": "type",
-                      "value": "2",
-                      "equals": true
+                      "value": "2"
                     },
                     {
                       "key": "company",
                       "value": "169",
-                      "equals": true,
                       "disabled": true
                     }
                   ]
@@ -500,9 +502,12 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
-                  "raw": "https://platform.finance/api/External/funds",
+                  "raw": "https://platform.finance/api/External/funds?",
                   "protocol": "https",
                   "host": [
                     "platform",
@@ -517,14 +522,12 @@
                     {
                       "key": "type",
                       "value": "2",
-                      "equals": true,
                       "description": ""8? $. >ABC?=K5 7=0G5=8O >?@545;ONBAO A?@02>G=8:>< B8?>2 D8=0=A>2KE ?@>4C:B>2.",
                       "disabled": true
                     },
                     {
                       "key": "company",
                       "value": "169",
-                      "equals": true,
                       "description": "45=B8D8:0B>@ >@30=870F88.  :0G5AB25 845=B8D8:0B>@0 <>65B ?5@54020BLAO :>4 >@30=870F88 8;8 04@5A AB@0=8FK >@30=870F88 (?0@0<5B@K prtId 8 pageName A>>B25BAB25==>, 2>72@0I05<K5 <5B>4>< «>;CG5=85 @55AB@0 >@30=870F89»).",
                       "disabled": true
                     }
@@ -633,8 +636,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-e0d14cce-dce7-4558-8dde-2f4b956b3b34",
           "name": "api/External/fund/:fundId",
+          "_postman_id": "4216768-e0d14cce-dce7-4558-8dde-2f4b956b3b34",
           "request": {
             "auth": {
               "type": "basic",
@@ -652,9 +655,12 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
-              "raw": "https://platform.finance/api/External/fund/959?type &company",
+              "raw": "https://platform.finance/api/External/fund/959?type &company &company",
               "protocol": "https",
               "host": [
                 "platform",
@@ -669,14 +675,12 @@
               "query": [
                 {
                   "key": "type ",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ""8? $. >ABC?=K5 7=0G5=8O >?@545;ONBAO A?@02>G=8:>< B8?>2 D8=0=A>2KE ?@>4C:B>2;"
                 },
                 {
                   "key": "company ",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "45=B8D8:0B>@ >@30=870F88.  :0G5AB25 845=B8D8:0B>@0 <>65B ?5@54020BLAO :>4 >@30=870F88 8;8 04@5A AB@0=8FK >@30=870F88 (?0@0<5B@K prtId 8 pageName A>>B25BAB25==>, 2>72@0I05<K5 <5B>4>< «>;CG5=85 @55AB@0 >@30=870F89»."
                 },
                 {
@@ -700,9 +704,12 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
-                  "raw": "https://platform.finance/api/External/fund/959",
+                  "raw": "https://platform.finance/api/External/fund/959?",
                   "protocol": "https",
                   "host": [
                     "platform",
@@ -717,8 +724,7 @@
                   "query": [
                     {
                       "key": "asd",
-                      "value": "",
-                      "equals": false,
+                      "value": null,
                       "disabled": true
                     }
                   ]
@@ -804,7 +810,10 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://platform.finance/api/External/fund/959"
               },
               "status": "OK",
@@ -879,8 +888,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-0a1ef720-1940-4dfc-bfa9-9c0a1f20c0c1",
           "name": "api/External/fund/:fundId/income",
+          "_postman_id": "4216768-0a1ef720-1940-4dfc-bfa9-9c0a1f20c0c1",
           "request": {
             "auth": {
               "type": "basic",
@@ -902,7 +911,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/fund/:fundId/income?period=3",
               "protocol": "https",
@@ -927,7 +939,8 @@
                 {
                   "key": "fundId",
                   "value": "959",
-                  "description": ">4 $\n"
+                  "description": ">4 $\n",
+                  "type": "string"
                 }
               ]
             },
@@ -946,7 +959,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/fund/959/income?period=3",
                   "protocol": "https",
@@ -965,7 +981,6 @@
                     {
                       "key": "period",
                       "value": "3",
-                      "equals": true,
                       "description": "5@8>4, 2 <5AOF0E, 70 :>B>@K9 @0AAG8BK205BAO 4>E>4=>ABL. \n\n0:A8<0;L=> 4>?CAB8<>5 7=0G5=85 >?@545;O5BAO <0:A8<0;L=K< 7=0G5=85< ?0@0<5B@0, 2>72@0I05<>3> <5B>4>< «>;CG5=85 40==KE $»"
                     }
                   ]
@@ -1031,8 +1046,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-fe716448-b582-4a3e-92bd-359bf41fa9b8",
           "name": "api/External/fund/:fundId/nav",
+          "_postman_id": "4216768-fe716448-b582-4a3e-92bd-359bf41fa9b8",
           "request": {
             "auth": {
               "type": "basic",
@@ -1054,7 +1069,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/fund/:fundId/nav?begDate=2001-01-01&endDate=2018-12-12",
               "protocol": "https",
@@ -1073,13 +1091,11 @@
                 {
                   "key": "begDate",
                   "value": "2001-01-01",
-                  "equals": true,
                   "description": "0B0 =0G0;0 ?5@8>40, D>@<0B `YYYY-MM-DD`"
                 },
                 {
                   "key": "endDate",
                   "value": "2018-12-12",
-                  "equals": true,
                   "description": "0B0 >:>=G0=8O ?5@8>40, D>@<0B `YYYY-MM-DD`"
                 }
               ],
@@ -1087,7 +1103,8 @@
                 {
                   "key": "fundId",
                   "value": "959",
-                  "description": "45=B8D8:0B>@ $"
+                  "description": "45=B8D8:0B>@ $",
+                  "type": "string"
                 }
               ]
             },
@@ -1106,7 +1123,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/fund/959/nav?begDate=2001-01-01&endDate=2018-12-12",
                   "protocol": "https",
@@ -1125,13 +1145,11 @@
                     {
                       "key": "begDate",
                       "value": "2001-01-01",
-                      "equals": true,
                       "description": "40B0 =0G0;0 ?5@8>40, D>@<0B `YYYY-MM-DD`"
                     },
                     {
                       "key": "endDate",
                       "value": "2018-12-12",
-                      "equals": true,
                       "description": "40B0 >:>=G0=8O ?5@8>40, D>@<0B `YYYY-MM-DD`"
                     }
                   ]
@@ -1209,8 +1227,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-e577116f-86c3-49b0-a839-8793e4d093b2",
           "name": "/api/External/bidFund",
+          "_postman_id": "4216768-e577116f-86c3-49b0-a839-8793e4d093b2",
           "request": {
             "method": "GET",
             "header": [
@@ -1219,7 +1237,10 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/bidFund?action=check&type=8&fundId=959",
               "protocol": "https",
@@ -1236,19 +1257,16 @@
                 {
                   "key": "action",
                   "value": "check",
-                  "equals": true,
                   "description": "\n"
                 },
                 {
                   "key": "type",
                   "value": "8",
-                  "equals": true,
                   "description": "1O70B5;L=K9 ?0@0<5B@. "8? 459AB28O A $. >ABC?=K5 7=0G5=8O: \n`8` - ?>:C?:0, \n`9` - ?>30H5=85, \n`10` - >1<5=, \n`19` - 70?@>A 2K?8A:8, \n`24` - 70?@>A @0AH8@5==>9 2K?8A:8.\n\n"
                 },
                 {
                   "key": "fundId",
                   "value": "959",
-                  "equals": true,
                   "description": "1O70B5;L=K9 ?0@0<5B@. 45=B8D8:0B>@ $ (?>;5 id, 2>72@0I05<>5 <5B>4>< «>;CG5=85 40==KE $»). ;O >1<5=0 ?5@5405BAO :>4 A?8AK205<>3> ?@>4C:B0.\n\n"
                 }
               ]
@@ -1257,16 +1275,16 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "4216768-121188fd-b5f4-40cb-fc5d-8e76a2328019",
+      "description": "#### $>=4K\n\n\n"
     },
     {
-      "_postman_id": "4216768-71e8d0db-0d4d-f398-582a-28125230021c",
       "name": "#?@02;ONI85 :><?0=88",
-      "description": "",
       "item": [
         {
-          "_postman_id": "4216768-744f7c05-b253-4ba0-9511-a62d9bb5f759",
           "name": "api/External/companies",
+          "_postman_id": "4216768-744f7c05-b253-4ba0-9511-a62d9bb5f759",
           "request": {
             "auth": {
               "type": "basic",
@@ -1288,7 +1306,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://platform.finance/api/External/companies",
             "description": "### >;CG5=85 @55AB@0 >@30=870F89\n5B>4 2>72@0I05B >B25B, A>45@60I89 XML 4>:C<5=B 8;8 JSON >1J5:B 2 :>B>@>< ?5@5405BAO @55AB@ >@30=870F89.\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| prtId | `int` | >4 >@30=870F88|\n| updateDate | `date`  | 0B0 >1=>2;5=8O >@30=870F88|\n| name | `string`  | >;=>5 =08<5=>20=85 >@30=870F88|\n| shortName | `string`  |@0B:>5 =08<5=>20=85 >@30=870F88|\n| pageName | `string`  | 4@5A 4;O AB@0=8FK >@30=870F88|\n| logoURL | `string`  | !AK;:0 =0 ;>3>B8? >@30=870F88|"
           },
@@ -1305,7 +1326,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://platform.finance/api/External/companies"
               },
               "status": "OK",
@@ -1380,8 +1404,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-98af0eeb-5edd-4860-ad49-ae368aac06e7",
           "name": "api/External/company/:prtId",
+          "_postman_id": "4216768-98af0eeb-5edd-4860-ad49-ae368aac06e7",
           "request": {
             "auth": {
               "type": "basic",
@@ -1404,7 +1428,10 @@
                 "disabled": true
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/company/:prtId",
               "protocol": "https",
@@ -1421,7 +1448,8 @@
               "variable": [
                 {
                   "key": "prtId",
-                  "value": "291"
+                  "value": "291",
+                  "type": "string"
                 }
               ]
             },
@@ -1445,7 +1473,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://platform.finance/api/External/company/:prtId",
                   "protocol": "https",
@@ -1539,8 +1570,8 @@
           ]
         },
         {
-          "_postman_id": "4216768-e07a30a4-c5e7-9d7b-54b8-ceb21ff00c7b",
           "name": "api/External/funds copy",
+          "_postman_id": "4216768-e07a30a4-c5e7-9d7b-54b8-ceb21ff00c7b",
           "request": {
             "auth": {
               "type": "basic",
@@ -1563,7 +1594,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/funds?type=1&company=169",
               "protocol": "https",
@@ -1580,13 +1614,11 @@
                 {
                   "key": "type",
                   "value": "1",
-                  "equals": true,
                   "description": ""8? $. >ABC?=K5 7=0G5=8O >?@545;ONBAO A?@02>G=8:>< B8?>2 D8=0=A>2KE ?@>4C:B>2."
                 },
                 {
                   "key": "company",
                   "value": "169",
-                  "equals": true,
                   "description": "45=B8D8:0B>@ >@30=870F88.  :0G5AB25 845=B8D8:0B>@0 <>65B ?5@54020BLAO :>4 >@30=870F88 8;8 04@5A AB@0=8FK >@30=870F88 (?0@0<5B@K prtId 8 pageName A>>B25BAB25==>, 2>72@0I05<K5 <5B>4>< «>;CG5=85 @55AB@0 >@30=870F89»)."
                 }
               ]
@@ -1598,11 +1630,7 @@
               "id": "4216768-2d583aa6-73d7-a9d1-5284-74d835498dcb",
               "name": "funds",
               "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
+                "header": []
               },
               "status": "OK",
               "code": 200,
@@ -1707,11 +1735,7 @@
               "id": "4216768-7f678a89-64fe-1582-d669-7d2ef28e6ef0",
               "name": "/api/External/funds",
               "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
+                "header": []
               },
               "status": "OK",
               "code": 200,
@@ -1816,11 +1840,7 @@
               "id": "4216768-860f967f-f08f-9ee0-2045-88a90b6848d3",
               "name": "funds?type=2",
               "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
+                "header": []
               },
               "status": "OK",
               "code": 200,
@@ -1925,11 +1945,7 @@
               "id": "4216768-9f673e85-9596-726d-e298-a2ddebaea873",
               "name": "funds?company=169",
               "originalRequest": {
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                }
+                "header": []
               },
               "status": "OK",
               "code": 200,
@@ -2032,16 +2048,15 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "4216768-71e8d0db-0d4d-f398-582a-28125230021c"
     },
     {
-      "_postman_id": "4216768-722f7ecd-1670-4195-be94-954dbded3bf9",
       "name": "=25AB>@K",
-      "description": "=25AB>@K. !>740=85, 87<5=5=85, 40==K5 :;85=B0, AG5B0, 4>:C<5=BK.",
       "item": [
         {
-          "_postman_id": "4216768-5fc3708e-b6d0-15d1-d0fe-b042e98928c7",
           "name": "/api/External/investors/create",
+          "_postman_id": "4216768-5fc3708e-b6d0-15d1-d0fe-b042e98928c7",
           "request": {
             "method": "POST",
             "header": [
@@ -2069,8 +2084,8 @@
           "response": []
         },
         {
-          "_postman_id": "4216768-3f4cd82e-be7c-5bc8-c9a3-9a7a34562ddd",
           "name": "/api/External/investors/:prtld",
+          "_postman_id": "4216768-3f4cd82e-be7c-5bc8-c9a3-9a7a34562ddd",
           "request": {
             "auth": {
               "type": "basic",
@@ -2097,7 +2112,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/investors/:prtld",
               "protocol": "https",
@@ -2114,7 +2132,8 @@
               "variable": [
                 {
                   "key": "prtld",
-                  "value": ""
+                  "value": "",
+                  "type": "string"
                 }
               ]
             },
@@ -2123,8 +2142,8 @@
           "response": []
         },
         {
-          "_postman_id": "4216768-72eeb073-64db-4f8c-b43b-14c6d92735fc",
           "name": "/api/External/investors/:prtId/accounts",
+          "_postman_id": "4216768-72eeb073-64db-4f8c-b43b-14c6d92735fc",
           "request": {
             "auth": {
               "type": "basic",
@@ -2146,9 +2165,12 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
-              "raw": "https://platform.finance/api/External/investors/:prtId/accounts",
+              "raw": "https://platform.finance/api/External/investors/:prtId/accounts?",
               "protocol": "https",
               "host": [
                 "platform",
@@ -2164,85 +2186,73 @@
               "query": [
                 {
                   "key": "status",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 AB0BCA0 4>:C<5=B0. $8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO ?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,» (70?OB0O).\n",
                   "disabled": true
                 },
                 {
                   "key": "fundId",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 =0?@02;5=8O 4>:C<5=B0. >?CAB8<K5 7=0G5=8O: `0`  2A5 (8A?>;L7C5BAO ?> C<>;G0=8N); `1`  2E>4OI89; `2`  8AE>4OI89.$8;LB@0F8O ?> B>G=><C A>2?045=8N.",
                   "disabled": true
                 },
                 {
                   "key": "type",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 B8?0 4>:C<5=B0. $8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO ?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,» (70?OB0O).",
                   "disabled": true
                 },
                 {
                   "key": "begDate",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "8=8<0;L=0O 40B0 A>740=8O 4>:C<5=B0 (2:;NG8B5;L=>)",
                   "disabled": true
                 },
                 {
                   "key": "endDate",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "0:A8<0;L=0O 40B0 A>740=8O 4>:C<5=B0 (2:;NG8B5;L=>)",
                   "disabled": true
                 },
                 {
                   "key": "orgName[like]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "08<5=>20=85 >@30=870F88 $8;LB@0F8O ?> <0A:5 `%7=0G5=85%`.",
                   "disabled": true
                 },
                 {
                   "key": "fundName[like\n]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "08<5=>20=85 $. $8;LB@0F8O ?> <0A:5 `%7=0G5=85%`.",
                   "disabled": true
                 },
                 {
                   "key": "num[like]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "><5@ 4>:C<5=B0. $8;LB@0F8O ?> <0A:5 `%7=0G5=85%`.",
                   "disabled": true
                 },
                 {
                   "key": "sortBy",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">@O4>: A>@B8@>2:8 40==KE.  :0G5AB25 @0745;8B5;O A?>;L7C5BAO 70?OB0O. >?CAB8<K5 ?>;O: `dir`, `num`, `type`, `orgName`, `fundName`, `status`, `date` @8<5@ 70?8A8:\n`orgName.asc`,`fundName.desc`",
                   "disabled": true
                 },
                 {
                   "key": "page",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "><5@ AB@0=8FK A 40==K<8.",
                   "disabled": true
                 },
                 {
                   "key": "pageSize",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">;8G5AB2> 70?8A59 =0 AB@0=8F5.",
                   "disabled": true
                 },
                 {
                   "key": "extFields",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "!?8A>: 4>?>;=8B5;L=KE ?>;59, 2:;NG05<KE 2 >B25B\n?> 70?@>AC.  :0G5AB25 @0745;8B5;O 8A?>;L7C5BAO 70?OB0O.\n>ABC?=K5 7=0G5=8O: `docName`  =08<5=>20=85 4>:C<5=B0,\n`statusName`  =08<5=>20=85 AB0BCA0 4>:C<5=B0, `orgName`  =08<5=>20=85 #, `fundName`  =08<5=>20=85 $.",
                   "disabled": true
                 }
@@ -2251,7 +2261,8 @@
                 {
                   "key": "prtId",
                   "value": "1001",
-                  "description": "45=B8D8:0B>@ 8=25AB>@0\n"
+                  "description": "45=B8D8:0B>@ 8=25AB>@0\n",
+                  "type": "string"
                 }
               ]
             },
@@ -2260,8 +2271,8 @@
           "response": []
         },
         {
-          "_postman_id": "4216768-06abae3c-c92c-4d80-8385-39273ccf1627",
           "name": "/api/External/investors/:prtld/documents",
+          "_postman_id": "4216768-06abae3c-c92c-4d80-8385-39273ccf1627",
           "request": {
             "method": "GET",
             "header": [
@@ -2275,7 +2286,10 @@
                 "disabled": true
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/investors/:prtld/documents?status&dir&type&begDate&endDate&fundId&orgName[like]&fundName[like\n]&num[like]&sortBy&page&pageSize&extFields",
               "protocol": "https",
@@ -2293,87 +2307,75 @@
               "query": [
                 {
                   "key": "status",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 AB0BCA0 4>:C<5=B0. $8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO\n?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,»\n(70?OB0O)."
                 },
                 {
                   "key": "dir",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 =0?@02;5=8O 4>:C<5=B0. >?CAB8<K5 7=0G5=8O:\n\n`0`  2A5 (8A?>;L7C5BAO ?> C<>;G0=8N);\n`1`  2E>4OI89;\n`2`  8AE>4OI89.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N."
                 },
                 {
                   "key": "type",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 B8?0 4>:C<5=B0.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO\n?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,»\n(70?OB0O)."
                 },
                 {
                   "key": "begDate",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "8=8<0;L=0O 40B0 A>740=8O 4>:C<5=B0\n\n(2:;NG8B5;L=>)"
                 },
                 {
                   "key": "endDate",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "0:A8<0;L=0O 40B0 A>740=8O 4>:C<5=B0\n\n(2:;NG8B5;L=>)"
                 },
                 {
                   "key": "fundId",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">4 $.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N."
                 },
                 {
                   "key": "orgName[like]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "08<5=>20=85 >@30=870F88\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
                 },
                 {
                   "key": "fundName[like\n]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "08<5=>20=85 $.\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
                 },
                 {
                   "key": "num[like]",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "><5@ 4>:C<5=B0.\n\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
                 },
                 {
                   "key": "sortBy",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">@O4>: A>@B8@>2:8 40==KE.  :0G5AB25\n@0745;8B5;O 8A?>;L7C5BAO 70?OB0O.\n>?CAB8<K5 ?>;O:\n`dir`, `num`, `type`, `orgName`, `fundName`, `status`, `date`\n@8<5@ 70?8A8:\n`orgName.asc`,`fundName.desc`"
                 },
                 {
                   "key": "page",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "><5@ AB@0=8FK A 40==K<8."
                 },
                 {
                   "key": "pageSize",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": ">;8G5AB2> 70?8A59 =0 AB@0=8F5."
                 },
                 {
                   "key": "extFields",
-                  "value": "",
-                  "equals": false,
+                  "value": null,
                   "description": "!?8A>: 4>?>;=8B5;L=KE ?>;59, 2:;NG05<KE 2 >B25B\n?> 70?@>AC.  :0G5AB25 @0745;8B5;O 8A?>;L7C5BAO 70?OB0O.\n>ABC?=K5 7=0G5=8O:\n`docName`  =08<5=>20=85 4>:C<5=B0,\n`statusName`  =08<5=>20=85 AB0BCA0 4>:C<5=B0,\n`orgName`  =08<5=>20=85 #,\n`fundName`  =08<5=>20=85 $."
                 }
               ],
               "variable": [
                 {
                   "key": "prtld",
-                  "value": ""
+                  "value": "",
+                  "type": "string"
                 }
               ]
             },
@@ -2382,8 +2384,8 @@
           "response": []
         },
         {
-          "_postman_id": "4216768-a8d6ed82-a8f3-b652-f6b4-f26955236098",
           "name": "/api/External/investors/:prtld",
+          "_postman_id": "4216768-a8d6ed82-a8f3-b652-f6b4-f26955236098",
           "request": {
             "auth": {
               "type": "basic",
@@ -2434,7 +2436,8 @@
               "variable": [
                 {
                   "key": "prtld",
-                  "value": ""
+                  "value": "",
+                  "type": "string"
                 }
               ]
             },
@@ -2443,8 +2446,8 @@
           "response": []
         },
         {
-          "_postman_id": "4216768-fe09ecbd-3906-4db8-98ff-de2546091bb7",
           "name": "token",
+          "_postman_id": "4216768-fe09ecbd-3906-4db8-98ff-de2546091bb7",
           "request": {
             "method": "POST",
             "header": [
@@ -2453,7 +2456,10 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/oauth/token?client_id=mob&grant_type=authorization_code&code&redirect_uri&client_secret",
               "protocol": "https",
@@ -2471,29 +2477,24 @@
                 {
                   "key": "client_id",
                   "value": "mob",
-                  "equals": true,
                   "description": "845=B8D8:0B>@ ?@8;>65=8O;"
                 },
                 {
                   "key": "grant_type",
                   "value": "authorization_code",
-                  "equals": true,
                   "description": "B8? >?5@0F88 (70?@>A B>:5=0);"
                 },
                 {
                   "key": "code",
-                  "value": "",
-                  "equals": false
+                  "value": null
                 },
                 {
                   "key": "redirect_uri",
-                  "value": "",
-                  "equals": false
+                  "value": null
                 },
                 {
                   "key": "client_secret",
-                  "value": "",
-                  "equals": false
+                  "value": null
                 }
               ]
             },
@@ -2501,16 +2502,16 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "4216768-722f7ecd-1670-4195-be94-954dbded3bf9",
+      "description": "=25AB>@K. !>740=85, 87<5=5=85, 40==K5 :;85=B0, AG5B0, 4>:C<5=BK."
     },
     {
-      "_postman_id": "4216768-9beedc84-a4e9-47fe-9ae4-f8eec280fb41",
       "name": "!?@02>G=8:8",
-      "description": "",
       "item": [
         {
-          "_postman_id": "4216768-692171cf-2e55-4423-b40f-bb419991de5f",
           "name": "api/External/list/{listName}",
+          "_postman_id": "4216768-692171cf-2e55-4423-b40f-bb419991de5f",
           "request": {
             "auth": {
               "type": "basic",
@@ -2532,7 +2533,10 @@
                 "value": "Basic c2l0ZTo0ekJuV0Z4cDJ0RHV3NER4UDRucFEwN3p1ODludXAyag=="
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://platform.finance/api/External/list/:listname",
               "protocol": "https",
@@ -2549,7 +2553,8 @@
               "variable": [
                 {
                   "key": "listname",
-                  "value": "fundStructureTypes"
+                  "value": "fundStructureTypes",
+                  "type": "string"
                 }
               ]
             },
@@ -2569,7 +2574,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://platform.finance/api/External/list/fundTypes"
               },
               "status": "OK",
@@ -2642,7 +2650,10 @@
                     "disabled": false
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://platform.finance/api/External/list/fundStructureTypes"
               },
               "status": "OK",
@@ -2717,6 +2728,7 @@
           ]
         }
       ],
+      "_postman_id": "4216768-9beedc84-a4e9-47fe-9ae4-f8eec280fb41",
       "event": [
         {
           "listen": "prerequest",
@@ -2741,8 +2753,8 @@
       ]
     },
     {
-      "_postman_id": "4216768-f63b4dd3-77de-49ca-bedd-b27049946630",
       "name": "/api/External/list/{listName}",
+      "_postman_id": "4216768-f63b4dd3-77de-49ca-bedd-b27049946630",
       "request": {
         "method": "GET",
         "header": [
@@ -2751,7 +2763,10 @@
             "value": "application/json"
           }
         ],
-        "body": {},
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
         "url": {
           "raw": "https://platform.finance/api/External/list/:listname",
           "protocol": "https",
@@ -2769,7 +2784,8 @@
             {
               "key": "listname",
               "value": "fundStructureTypes ",
-              "description": " 0720=85 A?@02>G=8:0. >ABC?=K5 7=0G5=8O: `fundTypes` ,`fundStructureTypes`"
+              "description": " 0720=85 A?@02>G=8:0. >ABC?=K5 7=0G5=8O: `fundTypes` ,`fundStructureTypes`",
+              "type": "string"
             }
           ]
         },
@@ -2809,32 +2825,28 @@
   ],
   "variable": [
     {
-      "id": "c75d1d1d-aca2-4f06-bcd0-779af2bdfb5d",
+      "id": "43369693-b461-4907-855e-bb892bbf5507",
       "key": "domain",
       "value": "https://platform.finance",
-      "type": "string",
-      "description": ""
+      "type": "string"
     },
     {
-      "id": "294eca60-9259-4206-9c9b-b0aaa93e567e",
+      "id": "51e9aa2a-b61c-44b6-a108-7cf7386e2cdb",
       "key": "company",
       "value": "125",
-      "type": "string",
-      "description": ""
+      "type": "string"
     },
     {
-      "id": "7cf981f1-2ba2-4b87-ba0b-d6092edbde36",
+      "id": "c5e460f7-0d83-4b04-a51c-af4b572199c5",
       "key": "fund",
       "value": "835",
-      "type": "string",
-      "description": ""
+      "type": "string"
     },
     {
-      "id": "f3c45ac9-4dcb-43ab-b512-7e87575a6297",
+      "id": "4f2798e8-6d0e-48e2-8f81-55f5cbacac4b",
       "key": "investor",
       "value": "12546",
-      "type": "string",
-      "description": ""
+      "type": "string"
     }
   ]
 }
