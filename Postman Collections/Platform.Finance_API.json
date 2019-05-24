@@ -684,7 +684,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": "0B0 =0G0;0 ?5@8>40, D>@<0B `YYYY-MM-DD`"
           },
           {
@@ -692,7 +691,6 @@
             "in": "query",
             "required": true,
             "type": "string",
-            "format": "date-time",
             "description": "0B0 >:>=G0=8O ?5@8>40, D>@<0B `YYYY-MM-DD`"
           },
           {
