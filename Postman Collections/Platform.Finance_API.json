@@ -58,13 +58,6 @@
             "required": true,
             "type": "string",
             "description": "$>@<0B >B25B0.: `application/json` 8;8 `application/xml`"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -369,12 +362,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/fund/959": {
@@ -562,12 +550,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/fund/{fundId}/income": {
@@ -601,13 +584,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -658,12 +634,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/fund/{fundId}/nav": {
@@ -703,13 +674,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -1188,12 +1152,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/bidFund": {
@@ -1245,12 +1204,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/companies": {
@@ -1268,13 +1222,6 @@
         "parameters": [
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -1365,12 +1312,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/company/{prtId}": {
@@ -1553,12 +1495,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/investors/create": {
@@ -1603,12 +1540,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/investors/{prtld}": {
@@ -1637,13 +1569,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1651,12 +1576,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       },
       "post": {
         "description": "5B>4 4;O >1=>2;5=8O 8=D>@<0F88 ?@>D8;O.",
@@ -1685,13 +1605,6 @@
             "description": ""
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Content-Type",
             "in": "header",
             "required": true,
@@ -1713,12 +1626,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/investors/{prtId}/accounts": {
@@ -1748,13 +1656,6 @@
             "required": true,
             "type": "string",
             "description": ""
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
           }
         ],
         "responses": {
@@ -1762,12 +1663,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/investors/{prtld}/documents": {
@@ -1894,12 +1790,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/oauth/token": {
@@ -1963,12 +1854,7 @@
             "description": "",
             "headers": {}
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     },
     "/list/{listname}": {
@@ -1993,13 +1879,6 @@
           },
           {
             "name": "Accept",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Authorization",
             "in": "header",
             "required": true,
             "type": "string",
@@ -2064,12 +1943,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ]
+        }
       }
     }
   },
@@ -3556,6 +3430,11 @@
       ]
     }
   },
+  "security": [
+    {
+      "auth": []
+    }
+  ],
   "tags": [
     {
       "name": "$>=4K",
