@@ -1,137 +1,3458 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>APIMATIC - Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    
-    
-
-    
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css" rel="stylesheet" />
-<link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css"
-          integrity="sha256-nVXk5aDYc/D4r9OoqxZ5H6vpIAqAG5BhVuIdOihDN1c="
-          crossorigin="anonymous" />
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-
-<link href="/bundles/front-css?v=11O7jOwdtFxvmVBTuhI4jW7gL4oZccYpht3O4dmVJC41" rel="stylesheet"/>
-
-    <link href="/bundles/onboarding-css?v=m1CDG8GUR5u_P3QvyzJOWHlZKrHcnVPf442vvOhB4h41" rel="stylesheet"/>
-
-
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
-    <!-- FAVICON START -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- FAVICON END -->
-
-</head>
-<body>
-    <div class="container onboarding-container">
-            <div class="onboarding-container-centered ">
-                
-
-
-
-<header class="flex flex-col align-center">
-    <div class="icon">
-        <a href="/">
-            <img class="mx-auto d-block" alt="APIMATIC logo" title="Welcome to APIMATIC" src="/imgs/apimatic-logo.svg" />
-        </a>
-    </div>
-    <div class="content">
-        <p>Login to your account</p>
-    </div>
-
-</header>
-<section class="form-wrapper flex flex-col">
-
-<form action="/account/login?ReturnUrl=%2Fapi%2Ftransform%3Fformat%3Dswagger20%26apikey%3DmONZg6E9hVHp7-WXsHucCGl-lXLvzN0t9GGEQ_s1xgrILHdXq_d50wEd8ptizzQN" id="loginForm" method="post" novalidate="True" role="form"><input name="__RequestVerificationToken" type="hidden" value="I4pKHXXjyYOwi1gZrQNJ3bS37qywEUkBkQXKB1J5mpmhC1mW-ZHRh4Lmd03f0xaoOPtdBWFST2oKt2f3i0UB5pL_T5MUICqrBozcBZNIaL01" /><div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
-</ul></div>        <div class="form-group">
-            <label class="mb-1" for="signInInputEmail1">
-                Email
-            </label>
-            <input class="form-control form-control-sm" data-Validation="email" data-val="true" data-val-email="The Email Address field is not a valid e-mail address." data-val-required="Email is required" id="Email" name="Email" placeholder="Enter email here" required="required" tabindex="2" type="email" value="" />
-
-        </div>
-        <div class="form-group mb-0">
-            <label class="mb-1" for="signInInputPassword">
-                Password
-            </label>
-            <a class="forgot-password" href="/account/forgotpassword?Length=7">Forgot password?</a>
-            <input class="form-control extra-padding-right" data-title="Caps lock is on" data-toggle="tooltip" data-trigger="manual" data-val="true" data-val-required="Password is required" id="js-onboarding-password-field" name="Password" placeholder="Password" required="true" type="password" />
-            <i class="fa fa-eye onboarding-show-password-icon" id="js-onboarding-show-password-icon"></i>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input class="custom-control-input" data-val="true" data-val-required="The Remember me? field is required." id="customControlInline" name="RememberMe" tabindex="4" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
-                Remember me
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-sm btn-block" tabindex="5">
-            Login
-        </button>
-        <a href="/account/register" class="btn btn-white btn-sm btn-block" tabindex="6">
-            Sign Up
-        </a>
-</form></section>
-
-            </div>
-    </div>
-</body>
-</html>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js"></script>
-
-<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
-
-<script src="/bundles/front-js?v="></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script>
-    $.validate({
-        modules: 'date, security'
-    });
-</script>
-<script src="/bundles/onboarding-js?v=2h6We__p_84-tByynY6kDWiE-iuM8Pigjw1rycnNaQY1"></script>
-
-
-
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Platform.Finance API",
+    "description": "API Platform Finance ?@54AB02;O5B A>1>9 =01>@ <5B>4>2 251 A5@28A0 A 8=B5@D59A>< AB8;O REST. 2B>@870F8O 2 251 A5@28A >ACI5AB2;O5BAO <5B>4>< `Basic access authentication` ?@>B>:>;0 HTTP (;>38= 8 ?0@>;L ?5@540NBAO 2 A>>B25BAB2CNI5< 703>;>2:5 70?@>A0). 1O70B5;L=K5 8 4>?>;=8B5;L=K5 2E>4=K5 ?0@0<5B@K 70?@>A>2 ?5@540NBAO 2 04@5A=>9 AB@>:5.\r\n\r\n\r\n@8 2K7>25 <5B>4>2 4>;6=K ?5@54020BLAO 703>;>2:8 `Content-Type` 8 `Accept`. =0G5=8O `application/xml` 8;8 `application/json`. \r\n\r\n@8 =5>1E>48<>AB8 ?5@540G8 7=0G5=89 703>;>2:>2, >B;8G=KE >B 2KH5?@82545==KE, A>>B25BAB2CNI0O 8=D>@<0F8O ?@82>48BAO 2 >?8A0=88 <5B>40 API.",
+    "contact": {}
+  },
+  "host": "platform.finance",
+  "basePath": "/api/External",
+  "securityDefinitions": {
+    "auth": {
+      "type": "basic"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/funds": {
+      "get": {
+        "description": "### >;CG5=85 @55AB@0 $\n5B>4 2>72@0I05B <0AA82 4>ABC?=KE : ?@>4065 $.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| updateDate | `date`  | 0B0 >1=>2;5=8O $|\n| prtId | `int` | >4 >@30=870F88|\n| name | `string`  | >;=>5 =08<5=>20=85 $ | \n| shortName | `string`  | @0B:>5 =08<5=>20=85 $ | \n| type | `int` |"8? $.|\n| pageName | `string`  |4@5A 4;O AB@0=8FK $|\n| buyOnlineURL | `string`  | 4@5A 4;O :=>?:8 «C?8BL»|\n| dataDate | `date`  | 0B0 0:BC0;L=>3> (?>A;54=53>) ?>:070B5;O.|\n| navOne | `int` |!B>8<>ABL >4=>3> ?0O.|\n| navAll | `int` | 07<5@ !'.|\n| period | `int` |5@8>4 2 <5AOF0E, 70 :>B>@K9 @0AAG8B0=0 4>E>4=>ABL|\n| incomeOne | `int`| >E>4=>ABL 70 ?5@8>4 ?> AB>8<>AB8 >4=>3> ?0O|\n| navOnePrev | `int`| =0G5=85 AB>8<>AB8 ?0O, ?@54H5AB2CNI55 0:BC0;L=><C 7=0G5=8N ?>:070B5;O.|\n| navAllPrev | `int`| =0G5=85 @07<5@0 !', ?@54H5AB2CNI55 0:BC0;L=><C 7=0G5=8N ?>:070B5;O.|\n| dailyIncomeOne | `int`| =0G5=85 @0AG5B=>9 4>E>4=>AB8 ?> AB>8<>AB8 ?0O |\n| minInvestSum | `int`| 8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88|\n| minReInvestSum | `int` |8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88|\n| companyShortName | `string`| @0B:>5 =08<5=>20=85 C?@02;ONI59 :><?0=88| \n| companyName |`string`|>;=>5 =08<5=>20=85 C?@02;ONI59 :><?0=88| \n| logoURL |`string`|!AK;:0 =0 ;>3>B8? C?@02;ONI59 :><?0=88|",
+        "summary": "api/External/funds",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "FundsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""8? $. >ABC?=K5 7=0G5=8O >?@545;ONBAO A?@02>G=8:>< B8?>2 D8=0=A>2KE ?@>4C:B>2."
+          },
+          {
+            "name": "company",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "45=B8D8:0B>@ >@30=870F88.  :0G5AB25 845=B8D8:0B>@0 <>65B ?5@54020BLAO :>4 >@30=870F88 8;8 04@5A AB@0=8FK >@30=870F88 (?0@0<5B@K prtId 8 pageName A>>B25BAB25==>, 2>72@0I05<K5 <5B>4>< «>;CG5=85 @55AB@0 >@30=870F89»)."
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "$>@<0B >B25B0.: `application/json` 8;8 `application/xml`"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/fund"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "id": 1220,
+                  "updateDate": "2018-04-18T17:53:54",
+                  "prtId": 291,
+                  "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+                  "shortName": "$ \"@A035@0-0:F88 6.4\"",
+                  "type": 2,
+                  "pageName": "akcii_64",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-03-30",
+                  "navOne": 5728.85,
+                  "navAll": 386284599.81,
+                  "period": 12,
+                  "incomeOne": 22.67,
+                  "navOnePrev": 5775.02,
+                  "navAllPrev": 385679568.73,
+                  "dailyIncomeOne": -0.8,
+                  "minInvestSum": 1000.0,
+                  "minReInvestSum": 1000.0,
+                  "companyShortName": " \"# \"@A035@0\"",
+                  "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "id": 1251,
+                  "updateDate": "2018-04-18T17:38:05",
+                  "prtId": 291,
+                  "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+                  "type": 2,
+                  "pageName": "akcii_mira",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-03-30",
+                  "navOne": 1104.78,
+                  "navAll": 46125241.36,
+                  "period": 12,
+                  "incomeOne": 14.07,
+                  "navOnePrev": 1115.85,
+                  "navAllPrev": 44717412.31,
+                  "dailyIncomeOne": -0.99,
+                  "minInvestSum": 1000.0,
+                  "minReInvestSum": 1000.0,
+                  "companyShortName": " \"# \"@A035@0\"",
+                  "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "id": 957,
+                  "updateDate": "2018-04-19T13:45:41",
+                  "prtId": 169,
+                  "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \";Q=:0 - 0?8B0;\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \";Q=:0  0?8B0;\"",
+                  "type": 1,
+                  "pageName": "ak",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-04-19",
+                  "navOne": 5064.0,
+                  "navAll": 93600301.2,
+                  "period": 5,
+                  "incomeOne": 1.31,
+                  "navOnePrev": 5053.1,
+                  "navAllPrev": 95296962.2,
+                  "dailyIncomeOne": 0.22,
+                  "minInvestSum": 10000.0,
+                  "minReInvestSum": 10000.0,
+                  "companyShortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+                  "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+                  "logoURL": "site/org_169_logo.jpg"
+                },
+                {
+                  "id": 940,
+                  "updateDate": "2018-04-18T17:47:58",
+                  "prtId": 170,
+                  "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@8:0?8B0; - ;>10;L=K5 8=25AB8F88\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@8:0?8B0; - ;>10;L=K5 8=25AB8F88\"",
+                  "type": 1,
+                  "pageName": "ari-fund-gi",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-04-20",
+                  "navOne": 974.56,
+                  "navAll": 175381712.84,
+                  "period": 12,
+                  "incomeOne": 4.01,
+                  "navOnePrev": 986.14,
+                  "navAllPrev": 177465966.52,
+                  "dailyIncomeOne": -1.17,
+                  "minInvestSum": 500000.0,
+                  "minReInvestSum": 100000.0,
+                  "companyShortName": " # \"@8:0?8B0;\"",
+                  "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN #?@02;ONI0O :><?0=8O \"@8:0?8B0;\"",
+                  "logoURL": "site/org_170_logo.jpg"
+                },
+                {
+                  "id": 941,
+                  "updateDate": "2018-04-18T17:48:34",
+                  "prtId": 170,
+                  "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@8:0?8B0; - '8ABK5 45=L38\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@8:0?8B0; - '8ABK5 45=L38\"",
+                  "type": 1,
+                  "pageName": "ari-fund-cm",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-04-20",
+                  "navOne": 1654.51,
+                  "navAll": 1087393526.86,
+                  "period": 12,
+                  "incomeOne": 10.23,
+                  "navOnePrev": 1678.82,
+                  "navAllPrev": 1103368325.71,
+                  "dailyIncomeOne": -1.45,
+                  "minInvestSum": 100000.0,
+                  "minReInvestSum": 10000.0,
+                  "companyShortName": " # \"@8:0?8B0;\"",
+                  "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN #?@02;ONI0O :><?0=8O \"@8:0?8B0;\"",
+                  "logoURL": "site/org_170_logo.jpg"
+                },
+                {
+                  "id": 1214,
+                  "updateDate": "2018-04-24T10:26:11",
+                  "prtId": 291,
+                  "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+                  "type": 1,
+                  "pageName": "fond_akcij",
+                  "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+                  "dataDate": "2018-04-20",
+                  "navOne": 7068.35,
+                  "navAll": 414721306.56,
+                  "period": 12,
+                  "incomeOne": 26.09,
+                  "navOnePrev": 7112.96,
+                  "navAllPrev": 417102595.36,
+                  "dailyIncomeOne": -0.63,
+                  "minInvestSum": 1000.0,
+                  "minReInvestSum": 1000.0,
+                  "companyShortName": " \"# \"@A035@0\"",
+                  "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "id": 1252,
+                  "updateDate": "2018-04-24T10:24:45",
+                  "prtId": 291,
+                  "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+                  "type": 1,
+                  "pageName": "fond_obligacij_kr_155",
+                  "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+                  "dataDate": "2018-04-20",
+                  "navOne": 1577.46,
+                  "navAll": 58996530.22,
+                  "period": 12,
+                  "incomeOne": 10.85,
+                  "navOnePrev": 1576.64,
+                  "navAllPrev": 58957847.4,
+                  "dailyIncomeOne": 0.05,
+                  "minInvestSum": 1000.0,
+                  "minReInvestSum": 1000.0,
+                  "companyShortName": " \"# \"@A035@0\"",
+                  "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "id": 1213,
+                  "updateDate": "2018-04-24T10:29:23",
+                  "prtId": 291,
+                  "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+                  "type": 1,
+                  "pageName": "fond_smeshannyh_investicij",
+                  "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+                  "dataDate": "2018-04-20",
+                  "navOne": 4929.73,
+                  "navAll": 131319477.07,
+                  "period": 12,
+                  "incomeOne": 23.13,
+                  "navOnePrev": 4948.24,
+                  "navAllPrev": 131812572.95,
+                  "dailyIncomeOne": -0.37,
+                  "minInvestSum": 1000.0,
+                  "minReInvestSum": 1000.0,
+                  "companyShortName": " \"# \"@A035@0\"",
+                  "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "id": 959,
+                  "updateDate": "2018-04-18T17:50:21",
+                  "prtId": 169,
+                  "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+                  "type": 1,
+                  "pageName": "vz",
+                  "buyOnlineURL": "none",
+                  "dataDate": "2018-04-20",
+                  "navOne": 1052.99,
+                  "navAll": 26340619.36,
+                  "period": 4,
+                  "incomeOne": 5.33,
+                  "navOnePrev": 1067.11,
+                  "navAllPrev": 26693705.39,
+                  "dailyIncomeOne": -1.32,
+                  "minInvestSum": 10000.0,
+                  "minReInvestSum": 10000.0,
+                  "companyShortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+                  "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+                  "logoURL": "site/org_169_logo.jpg"
+                },
+                {
+                  "id": 1110,
+                  "updateDate": "2018-04-17T12:13:48",
+                  "prtId": 484,
+                  "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \""$ - 0;NB=K5 52@>>1;830F88\"",
+                  "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \""$ - 0;NB=K5 52@>>1;830F88\"",
+                  "type": 1,
+                  "pageName": "opif-rfi-tfg-valutnye-evroobligacii",
+                  "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1110&utm_agent=",
+                  "dataDate": "2018-04-20",
+                  "navOne": 163.31,
+                  "navAll": 359130359.65,
+                  "period": 12,
+                  "incomeOne": 8.24,
+                  "navOnePrev": 164.9,
+                  "navAllPrev": 362628016.63,
+                  "dailyIncomeOne": -0.96,
+                  "minInvestSum": 300000.0,
+                  "minReInvestSum": 300000.0,
+                  "companyShortName": " \"# "$\"",
+                  "companyName": ":F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"" !$ #\"",
+                  "logoURL": "site/org_484_logo.jpg"
+                }
+              ]
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Tue, 24 Apr 2018 08:43:41 GMT"
+              },
+              "Link": {
+                "type": "string",
+                "default": "<http://platform.finance/api/External/funds>; rel=\"self\",<http://platform.finance/api/External/funds?page=1>; rel=\"first\",<http://platform.finance/api/External/funds?page=2>; rel=\"next\",<http://platform.finance/api/External/funds?page=2>; rel=\"last\""
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              },
+              "X-Pagination-Current-Page": {
+                "type": "string",
+                "default": "1"
+              },
+              "X-Pagination-Per-Page": {
+                "type": "string",
+                "default": "10"
+              },
+              "X-Pagination-Total-Entries": {
+                "type": "string",
+                "default": "13"
+              },
+              "X-Pagination-Total-Pages": {
+                "type": "string",
+                "default": "2"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fund/959": {
+      "get": {
+        "description": "### >;CG5=85 40==KE $\n5B>4 2>72@0I05B <0AA82 40==KE C:070==>3> $.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | "8? |?8A0=85|\n| --------- | ----------- | -----------|\n| id  | `int` |>4 $.|\n| updateDate  | `date` | 0B0 >1=>2;5=8O $. |\n| prtId  | `int` |45=B8D8:0B>@ #.|\n| name  | `string` | >;=>5 =08<5=>20=85 $ |\n| shortName  | `string` | @0B:>5 =08<5=>20=85 $ |\n| type  | `int` |"8? $.|\n| pageName  | `string` | 4@5A 4;O AB@0=8FK $ |\n| buyOnlineURL  | `string` | 4@5A 4;O :=>?:8 «C?8BL». |\n| shortDescr  | `string` | @0B:>5 >?8A0=85 A D>@<0B8@>20=85< HTML |\n| fullDescr  | `string` | >4@>1=>5 >?8A0=85 A D>@<0B8@>20=85< HTML|\n| advantages | `array` | 55AB@ 40==KE > ?@58<CI5AB20E $ |\n| fees | `array` | 55AB@ 40==KE > :><8AA8OE $ |\n| dataDate | `date` | 0B0 0:BC0;870F88 ?>:070B5;59 |\n| navAll | `int` | :BC0;L=0O AB>8<>ABL G8ABKE 0:B82>2 |\n| navOne | `int` |:BC0;L=0O AB>8<>ABL >4=>3> ?0O |\n| navOnePrev | `int` | 55AB@ 40==KE > $ 4;O >1<5=0 |\n| dailyIncomeOne | `int` |=0G5=85 @0AG5B=>9 4>E>4=>AB8 ?> AB>8<>AB8 ?0O  |\n| minInvestSum | `int` |8=8<0;L=0O AC<<0 4;O 8=25AB8F88.|\n| minReInvestSum | `int` |8=8<0;L=0O AC<<0 ?>2B>@=>9 8=25AB8F88.|\n| incomes | `array` | 55AB@ 40==KE > 4>E>4=>AB8 $ 70 @07;8G=K5 ?5@8>4K.|\n| structure | `array` |!B@C:BC@0 $.|\n| companyShortName | `string` |@0B:>5 =08<5=>20=85 #.|\n| companyName | `string` |>;=>5 =08<5=>20=85 #. |\n| logoURL | `string` |!AK;:0 =0 ;>3>B8? #.|",
+        "summary": "api/External/fund/:fundId",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "Fund959Get",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "company",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/api~1External~1fund~1959"
+            },
+            "examples": {
+              "application/json": {
+                "id": 959,
+                "updateDate": "2018-04-18T17:50:21",
+                "prtId": 169,
+                "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+                "type": 1,
+                "pageName": "vz",
+                "buyOnlineURL": "none",
+                "shortDescr": "<font color=\"#9C9C94\">-B> 20;NB=K9 (4>;;0@, 52@>) >1;830F8>==K9 D>=4, >A=>2C ?>@BD5;O :>B>@>3> A>AB02;ONB 3>AC40@AB25==K5 8 :>@?>@0B82=K5 >1;830F88 254CI8E :>@?>@0F89 <8@0.</font>",
+                "fullDescr": "$ @D8 «0;NB=K9 @575@2»  MB> 20;NB=K9 (4>;;0@, 52@>) >1;830F8>==K9 D>=4, >A=>2C ?>@BD5;O :>B>@>3> A>AB02;ONB 3>AC40@AB25==K5 8 :>@?>@0B82=K5 >1;830F88 254CI8E :>@?>@0F89 <8@0.&nbsp; <br>",
+                "advantages": {
+                  "advantage": [
+                    {
+                      "description": ":B82=> C?@02;O5<K9 D>=4, ?>@BD5;L >?B8<878@C5BAO 8AE>4O 87 A8BC0F88 =0 @K=:5"
+                    },
+                    {
+                      "description": "48= 87 =081>;55 :>=A5@20B82=KE D>=4>2 2 ;8=59:5 «#»"
+                    }
+                  ]
+                },
+                "fees": {
+                  "fee": [
+                    {
+                      "description": "0 C?@02;5=85 - 1.5% 2 3>4"
+                    },
+                    {
+                      "description": "@8 ?>30H5=88 ?0O @0=55, G5< G5@57 365 4=O  0.5% >B AC<<K, G5@57 1 3>4 - 0.25% >B AC<<K"
+                    }
+                  ]
+                },
+                "fileLinks": {
+                  "link": [
+                    {
+                      "url": "http://invmc.ru/funds/vz/",
+                      "description": "@028;0 4>25@8B5;L=>3> C?@02;5=8O"
+                    },
+                    {
+                      "url": "http://invmc.ru/funds/vz/",
+                      "description": "BG5B=>ABL D>=40"
+                    }
+                  ]
+                },
+                "dataDate": "2018-04-24",
+                "navOne": 1069.54,
+                "navAll": 26754460.68,
+                "navOnePrev": 1061.65,
+                "navAllPrev": 26557215.2,
+                "dailyIncomeOne": 0.74,
+                "minInvestSum": 10000.0,
+                "minReInvestSum": 10000.0,
+                "incomes": {
+                  "income": [
+                    {
+                      "period": 3,
+                      "incomeOne": 7.57
+                    },
+                    {
+                      "period": 4,
+                      "incomeOne": 6.98
+                    }
+                  ]
+                },
+                "structure": {
+                  "active": [
+                    {
+                      "type": 0,
+                      "value": 11.36
+                    },
+                    {
+                      "type": 1,
+                      "value": 29.14
+                    },
+                    {
+                      "type": 2,
+                      "value": 35.58
+                    },
+                    {
+                      "type": 3,
+                      "value": 0.0
+                    },
+                    {
+                      "type": 4,
+                      "value": 0.0
+                    },
+                    {
+                      "type": 5,
+                      "value": 0.0
+                    },
+                    {
+                      "type": 6,
+                      "value": 0.0
+                    },
+                    {
+                      "type": 7,
+                      "value": 24.7
+                    }
+                  ]
+                },
+                "companyShortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+                "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+                "logoURL": "site/org_169_logo.jpg"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Wed, 25 Apr 2018 14:01:30 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fund/{fundId}/income": {
+      "get": {
+        "description": "### >;CG5=85 4>E>4=>AB8 $.\n5B>4 2>72@0I05B ?>:070B5;8 4>E>4=>AB8 $ 70 C:070==K9 ?5@8>4.\n\n### 0@0<5B@K >B25B0\n\n| 0@0<5B@ | "8? | ?8A0=85 |\n| --------- | ----------- | -----------|\n| `begNavOne` | `int` | !B>8<>ABL ?0O =0 40BC =0G0;0 ?5@8>40. |\n| `endNavOne` | `int` | !B>8<>ABL ?0O =0 40BC >:>=G0=8O ?5@8>40. |\n| `incomeOne` | `int` | >E>4=>ABL ?> AB>8<>AB8 ?0O. |",
+        "summary": "api/External/fund/:fundId/income",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "FundIncomeByFundIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "period",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "fundId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ">4 $"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/api~1External~1fund~1959~1income%3Fperiod%3D3"
+            },
+            "examples": {
+              "application/json": {
+                "begNavOne": 994.27,
+                "endNavOne": 1069.54,
+                "incomeOne": 7.57
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Length": {
+                "type": "string",
+                "default": "57"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Wed, 25 Apr 2018 13:49:32 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fund/{fundId}/nav": {
+      "get": {
+        "description": "### >;CG5=85 ?>:070B5;59 $\n5B>4 2>72@0I05B ?>:070B5;8 !' $ 70 C:070==K9 ?5@8>4.\n\n### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | "8? | ?8A0=85 |\n| --------- | ----------- | -----------|\n| `dataDate` | `date` | 0B0 ?>:070B5;O. |\n| `navOne` | `int` | !B>8<>ABL >4=>3> ?0O. |\n| `navAll` | `int` | 07<5@ !'. |",
+        "summary": "api/External/fund/:fundId/nav",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "FundNavByFundIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "begDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "0B0 =0G0;0 ?5@8>40, D>@<0B `YYYY-MM-DD`"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "0B0 >:>=G0=8O ?5@8>40, D>@<0B `YYYY-MM-DD`"
+          },
+          {
+            "name": "fundId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "45=B8D8:0B>@ $"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/~1api~1External~1fund~1959~1nav"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "dataDate": "2017-12-14",
+                  "navOne": 999.72,
+                  "navAll": 25017909.91
+                },
+                {
+                  "dataDate": "2017-12-15",
+                  "navOne": 999.43,
+                  "navAll": 25010821.82
+                },
+                {
+                  "dataDate": "2017-12-18",
+                  "navOne": 999.15,
+                  "navAll": 25003735.73
+                },
+                {
+                  "dataDate": "2017-12-19",
+                  "navOne": 998.87,
+                  "navAll": 24996651.66
+                },
+                {
+                  "dataDate": "2017-12-20",
+                  "navOne": 998.37,
+                  "navAll": 24984188.77
+                },
+                {
+                  "dataDate": "2017-12-21",
+                  "navOne": 998.33,
+                  "navAll": 24983188.51
+                },
+                {
+                  "dataDate": "2017-12-22",
+                  "navOne": 998.77,
+                  "navAll": 24994155.14
+                },
+                {
+                  "dataDate": "2017-12-25",
+                  "navOne": 999.66,
+                  "navAll": 25016515.45
+                },
+                {
+                  "dataDate": "2017-12-26",
+                  "navOne": 1000.33,
+                  "navAll": 25033171.03
+                },
+                {
+                  "dataDate": "2017-12-27",
+                  "navOne": 997.17,
+                  "navAll": 24954172.23
+                },
+                {
+                  "dataDate": "2017-12-28",
+                  "navOne": 996.65,
+                  "navAll": 24941139.61
+                },
+                {
+                  "dataDate": "2017-12-29",
+                  "navOne": 997.36,
+                  "navAll": 24958846.25
+                },
+                {
+                  "dataDate": "2018-01-09",
+                  "navOne": 999.44,
+                  "navAll": 25010896.28
+                },
+                {
+                  "dataDate": "2018-01-10",
+                  "navOne": 999.73,
+                  "navAll": 25018296.08
+                },
+                {
+                  "dataDate": "2018-01-11",
+                  "navOne": 998.01,
+                  "navAll": 24975308.05
+                },
+                {
+                  "dataDate": "2018-01-12",
+                  "navOne": 997.2,
+                  "navAll": 24954999.54
+                },
+                {
+                  "dataDate": "2018-01-15",
+                  "navOne": 996.48,
+                  "navAll": 24937027.98
+                },
+                {
+                  "dataDate": "2018-01-16",
+                  "navOne": 995.12,
+                  "navAll": 24902880.49
+                },
+                {
+                  "dataDate": "2018-01-17",
+                  "navOne": 995.25,
+                  "navAll": 24906112.08
+                },
+                {
+                  "dataDate": "2018-01-18",
+                  "navOne": 995.36,
+                  "navAll": 24908922.86
+                },
+                {
+                  "dataDate": "2018-01-19",
+                  "navOne": 994.76,
+                  "navAll": 24893887.92
+                },
+                {
+                  "dataDate": "2018-01-22",
+                  "navOne": 995.02,
+                  "navAll": 24900395.99
+                },
+                {
+                  "dataDate": "2018-01-23",
+                  "navOne": 994.74,
+                  "navAll": 24893341.2
+                },
+                {
+                  "dataDate": "2018-01-24",
+                  "navOne": 994.27,
+                  "navAll": 24881669.71
+                },
+                {
+                  "dataDate": "2018-01-25",
+                  "navOne": 994.52,
+                  "navAll": 24887886.47
+                },
+                {
+                  "dataDate": "2018-01-26",
+                  "navOne": 997.7,
+                  "navAll": 24967352.2
+                },
+                {
+                  "dataDate": "2018-01-29",
+                  "navOne": 999.6,
+                  "navAll": 25014937.95
+                },
+                {
+                  "dataDate": "2018-01-30",
+                  "navOne": 999.34,
+                  "navAll": 25008525.51
+                },
+                {
+                  "dataDate": "2018-01-31",
+                  "navOne": 998.43,
+                  "navAll": 24985669.55
+                },
+                {
+                  "dataDate": "2018-02-01",
+                  "navOne": 997.18,
+                  "navAll": 24954552.41
+                },
+                {
+                  "dataDate": "2018-02-02",
+                  "navOne": 1001.23,
+                  "navAll": 25055826.57
+                },
+                {
+                  "dataDate": "2018-02-05",
+                  "navOne": 1003.65,
+                  "navAll": 25116358.58
+                },
+                {
+                  "dataDate": "2018-02-06",
+                  "navOne": 1007.16,
+                  "navAll": 25204060.72
+                },
+                {
+                  "dataDate": "2018-02-07",
+                  "navOne": 1006.88,
+                  "navAll": 25197159.83
+                },
+                {
+                  "dataDate": "2018-02-08",
+                  "navOne": 1013.02,
+                  "navAll": 25350873.04
+                },
+                {
+                  "dataDate": "2018-02-09",
+                  "navOne": 1013.53,
+                  "navAll": 25363588.73
+                },
+                {
+                  "dataDate": "2018-02-12",
+                  "navOne": 1010.63,
+                  "navAll": 25291081.22
+                },
+                {
+                  "dataDate": "2018-02-13",
+                  "navOne": 1008.33,
+                  "navAll": 25233440.04
+                },
+                {
+                  "dataDate": "2018-02-14",
+                  "navOne": 1002.63,
+                  "navAll": 25090896.3
+                },
+                {
+                  "dataDate": "2018-02-15",
+                  "navOne": 996.28,
+                  "navAll": 24931800.86
+                },
+                {
+                  "dataDate": "2018-02-16",
+                  "navOne": 992.29,
+                  "navAll": 24831973.47
+                },
+                {
+                  "dataDate": "2018-02-20",
+                  "navOne": 993.61,
+                  "navAll": 24865079.39
+                },
+                {
+                  "dataDate": "2018-02-21",
+                  "navOne": 993.8,
+                  "navAll": 24869904.73
+                },
+                {
+                  "dataDate": "2018-02-22",
+                  "navOne": 993.61,
+                  "navAll": 24865057.95
+                },
+                {
+                  "dataDate": "2018-02-26",
+                  "navOne": 987.46,
+                  "navAll": 24711244.77
+                },
+                {
+                  "dataDate": "2018-02-27",
+                  "navOne": 991.02,
+                  "navAll": 24800153.88
+                },
+                {
+                  "dataDate": "2018-02-28",
+                  "navOne": 991.27,
+                  "navAll": 24806493.71
+                },
+                {
+                  "dataDate": "2018-03-01",
+                  "navOne": 997.1,
+                  "navAll": 24952342.19
+                },
+                {
+                  "dataDate": "2018-03-02",
+                  "navOne": 1001.12,
+                  "navAll": 25052988.66
+                },
+                {
+                  "dataDate": "2018-03-05",
+                  "navOne": 997.87,
+                  "navAll": 24971791.62
+                },
+                {
+                  "dataDate": "2018-03-06",
+                  "navOne": 993.31,
+                  "navAll": 24857496.99
+                },
+                {
+                  "dataDate": "2018-03-07",
+                  "navOne": 996.68,
+                  "navAll": 24941928.43
+                },
+                {
+                  "dataDate": "2018-03-12",
+                  "navOne": 998.19,
+                  "navAll": 24979729.16
+                },
+                {
+                  "dataDate": "2018-03-13",
+                  "navOne": 997.28,
+                  "navAll": 24956816.37
+                },
+                {
+                  "dataDate": "2018-03-14",
+                  "navOne": 1001.93,
+                  "navAll": 25073351.18
+                },
+                {
+                  "dataDate": "2018-03-15",
+                  "navOne": 998.72,
+                  "navAll": 24992929.12
+                },
+                {
+                  "dataDate": "2018-03-16",
+                  "navOne": 999.84,
+                  "navAll": 25020968.15
+                },
+                {
+                  "dataDate": "2018-03-19",
+                  "navOne": 1003.48,
+                  "navAll": 25112196.34
+                },
+                {
+                  "dataDate": "2018-03-20",
+                  "navOne": 999.26,
+                  "navAll": 25006426.99
+                },
+                {
+                  "dataDate": "2018-03-21",
+                  "navOne": 997.52,
+                  "navAll": 24962992.46
+                },
+                {
+                  "dataDate": "2018-03-22",
+                  "navOne": 996.99,
+                  "navAll": 24949694.2
+                },
+                {
+                  "dataDate": "2018-03-23",
+                  "navOne": 995.03,
+                  "navAll": 24900679.83
+                },
+                {
+                  "dataDate": "2018-03-26",
+                  "navOne": 997.7,
+                  "navAll": 24967346.56
+                },
+                {
+                  "dataDate": "2018-03-27",
+                  "navOne": 997.35,
+                  "navAll": 24948816.55
+                },
+                {
+                  "dataDate": "2018-03-28",
+                  "navOne": 999.14,
+                  "navAll": 24993403.39
+                },
+                {
+                  "dataDate": "2018-03-29",
+                  "navOne": 997.83,
+                  "navAll": 24960795.52
+                },
+                {
+                  "dataDate": "2018-03-30",
+                  "navOne": 996.8,
+                  "navAll": 24935008.91
+                },
+                {
+                  "dataDate": "2018-04-02",
+                  "navOne": 998.56,
+                  "navAll": 24979059.65
+                },
+                {
+                  "dataDate": "2018-04-03",
+                  "navOne": 998.69,
+                  "navAll": 24982245.06
+                },
+                {
+                  "dataDate": "2018-04-04",
+                  "navOne": 998.19,
+                  "navAll": 24969803.6
+                },
+                {
+                  "dataDate": "2018-04-05",
+                  "navOne": 1000.01,
+                  "navAll": 25015237.66
+                },
+                {
+                  "dataDate": "2018-04-06",
+                  "navOne": 1002.83,
+                  "navAll": 25085869.14
+                },
+                {
+                  "dataDate": "2018-04-09",
+                  "navOne": 1034.1,
+                  "navAll": 25868003.53
+                },
+                {
+                  "dataDate": "2018-04-10",
+                  "navOne": 1066.33,
+                  "navAll": 26674306.81
+                },
+                {
+                  "dataDate": "2018-04-11",
+                  "navOne": 1089.48,
+                  "navAll": 27253389.18
+                },
+                {
+                  "dataDate": "2018-04-12",
+                  "navOne": 1072.47,
+                  "navAll": 26827725.47
+                },
+                {
+                  "dataDate": "2018-04-13",
+                  "navOne": 1069.57,
+                  "navAll": 26755388.26
+                },
+                {
+                  "dataDate": "2018-04-16",
+                  "navOne": 1070.22,
+                  "navAll": 26771452.15
+                },
+                {
+                  "dataDate": "2018-04-17",
+                  "navOne": 1066.2,
+                  "navAll": 26670888.57
+                },
+                {
+                  "dataDate": "2018-04-18",
+                  "navOne": 1061.98,
+                  "navAll": 26565501.25
+                },
+                {
+                  "dataDate": "2018-04-19",
+                  "navOne": 1067.11,
+                  "navAll": 26693705.39
+                },
+                {
+                  "dataDate": "2018-04-20",
+                  "navOne": 1052.99,
+                  "navAll": 26340484.28
+                },
+                {
+                  "dataDate": "2018-04-23",
+                  "navOne": 1061.65,
+                  "navAll": 26557215.2
+                },
+                {
+                  "dataDate": "2018-04-24",
+                  "navOne": 1069.54,
+                  "navAll": 26754460.68
+                }
+              ]
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Wed, 25 Apr 2018 13:50:49 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bidFund": {
+      "get": {
+        "description": "\t",
+        "summary": "/api/External/bidFund",
+        "tags": [
+          "$>=4K"
+        ],
+        "operationId": "BidFundGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "1O70B5;L=K9 ?0@0<5B@. "8? 459AB28O A $. >ABC?=K5 7=0G5=8O: \n`8` - ?>:C?:0, \n`9` - ?>30H5=85, \n`10` - >1<5=, \n`19` - 70?@>A 2K?8A:8, \n`24` - 70?@>A @0AH8@5==>9 2K?8A:8."
+          },
+          {
+            "name": "fundId",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "1O70B5;L=K9 ?0@0<5B@. 45=B8D8:0B>@ $ (?>;5 id, 2>72@0I05<>5 <5B>4>< «>;CG5=85 40==KE $»). ;O >1<5=0 ?5@5405BAO :>4 A?8AK205<>3> ?@>4C:B0."
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "description": "### >;CG5=85 @55AB@0 >@30=870F89\n5B>4 2>72@0I05B >B25B, A>45@60I89 XML 4>:C<5=B 8;8 JSON >1J5:B 2 :>B>@>< ?5@5405BAO @55AB@ >@30=870F89.\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| prtId | `int` | >4 >@30=870F88|\n| updateDate | `date`  | 0B0 >1=>2;5=8O >@30=870F88|\n| name | `string`  | >;=>5 =08<5=>20=85 >@30=870F88|\n| shortName | `string`  |@0B:>5 =08<5=>20=85 >@30=870F88|\n| pageName | `string`  | 4@5A 4;O AB@0=8FK >@30=870F88|\n| logoURL | `string`  | !AK;:0 =0 ;>3>B8? >@30=870F88|",
+        "summary": "api/External/companies",
+        "tags": [
+          "#?@02;ONI85 :><?0=88"
+        ],
+        "operationId": "CompaniesGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/company"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "prtId": 291,
+                  "updateDate": "2018-04-04T18:35:01",
+                  "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                  "shortName": " \"# \"@A035@0\"",
+                  "pageName": "arsagera",
+                  "logoURL": "site/org_291_logo.jpg"
+                },
+                {
+                  "prtId": 169,
+                  "updateDate": "2018-04-04T18:35:48",
+                  "name": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+                  "shortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+                  "pageName": "invmc",
+                  "logoURL": "site/org_169_logo.jpg"
+                },
+                {
+                  "prtId": 484,
+                  "updateDate": "2018-04-04T18:36:02",
+                  "name": ":F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"" !$ #\"",
+                  "shortName": " \"# "$\"",
+                  "pageName": "tfg",
+                  "logoURL": "site/org_484_logo.jpg"
+                },
+                {
+                  "prtId": 170,
+                  "updateDate": "2018-04-11T13:29:41",
+                  "name": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN #?@02;ONI0O :><?0=8O \"@8:0?8B0;\"",
+                  "shortName": " # \"@8:0?8B0;\"",
+                  "pageName": "aricapital",
+                  "logoURL": "site/org_170_logo.jpg"
+                }
+              ]
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Tue, 24 Apr 2018 08:46:09 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/company/{prtId}": {
+      "get": {
+        "description": "### >;CG5=85 40==KE >@30=870F88\n5B>4 2>72@0I05B >B25B, A>45@60I89 XML 4>:C<5=B 8;8 JSON >1J5:B 2 :>B>@>< ?5@540NBAO 40==K5 >@30=870F88.\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n| 0@0<5B@ | B8? |?8A0=85|\n| --------- | ----------- | -----------|\n| company | `int` | >4 >@30=870F88| \n| prtId | `date`  | 0B0 >1=>2;5=8O >@30=870F88| \n| name | `string`  | >;=>5 =08<5=>20=85 >@30=870F88| \n| shortName | `string`  |@0B:>5 =08<5=>20=85 >@30=870F88| \n| inn | `int`  |  >@30=870F88| \n| kpp | `int`  |  >@30=870F88| \n| ogrn | `int`  |   >@30=870F88| \n| addrReg | `string`  |4@5A <5AB>=0E>645=8O >@30=870F88| \n| addrPost | `string`  | >GB>2K9 04@5A >@30=870F88| \n| phone | `int`  | >=B0:B=K9 B5;5D>= >@30=870F88| \n| mainInformation | `string`  | 1O70B5;L=0O 8=D>@<0F8O 4;O A09B0 A D>@<0B8@>20=85< HTML| \n| addInformations | `array`  |  55AB@ 40==KE 4>?>;=8B5;L=>9 8=D>@<0F88| \n| products | `object`  |   55AB@ ?@>4C:B>2 >@30=870F88|\n| kpp | `int`  |  >@30=870F88| \n| logoURL | `string`  | !AK;:0 =0 ;>3>B8? >@30=870F88| \n\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n`company` ;>: 40==KE ?> >@30=870F88.\n\n`prtId` >4 >@30=870F88.\n\n`updateDate` `YYYY-MM-DDThh24:mi:ss`  0B0 >1=>2;5=8O >@30=870F88.\n\n`name` >;=>5 =08<5=>20=85.\n\n`shortName` @0B:>5 =08<5=>20=85.\n\n`inn`  .\n\n`kpp`  -  .\n\n`ogrn` -   .\n\n`addrReg` .\n\n`addrPost` .\n\n`phone`\n\n`mainInformation` 1O70B5;L=0O 8=D>@<0F8O 4;O A09B0 A D>@<0B8@>20=85< HTML\n\n`addInformations`  55AB@ 40==KE 4>?>;=8B5;L=>9 8=D>@<0F88\n\n`information`\n\n`header` 03>;>2>: 4>?>;=8B5;L=>9 8=D>@<0F88\n\n`content` !>45@60=85 4>?>;=8B5;L=>9 8=D>@<0F88 A D>@<0B8@>20=85< HTML\n\n`products`  55AB@ ?@>4C:B>2 >@30=870F88\n\n`funds`  55AB@ $ >@30=870F88. \n\n`fund` ;>: 40==KE ?> $.\n\n`id` >4 $.\n\n`updateDate` 0B0 >1=>2;5=8O $.\n\n`name` 08<5=>20=85 $.\n\n`type` "8? $.\n\n`pageName` 4@5A 4;O AB@0=8FK $\n\n`buyOnlineURL` 4@5A 4;O :=>?:8 «C?8BL».\n\n`dataDate` 0B0 0:BC0;L=>3> (?>A;54=53>) ?>:070B5;O.\n\n`navOne` !B>8<>ABL >4=>3> ?0O.\n\n`navAll`  07<5@ !'.\n\n`period` 5@8>4 2 <5AOF0E, 70 :>B>@K9 @0AAG8B0=0 4>E>4=>ABL.\n\n`incomeOne` >E>4=>ABL 70 ?5@8>4 ?> AB>8<>AB8 >4=>3> ?0O.\n\n`incomeAll` >E>4=>ABL 70 ?5@8>4 ?> @07<5@C !'.\n\n`minInvestSum` 8=8<0;L=0O AC<<0 4;O 8=25AB8F88.",
+        "summary": "api/External/company/:prtId",
+        "tags": [
+          "#?@02;ONI85 :><?0=88"
+        ],
+        "operationId": "CompanyByPrtIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "prtId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/api~1External~1company~1291"
+            },
+            "examples": {
+              "application/json": {
+                "prtId": 291,
+                "updateDate": "2018-04-04T18:35:01",
+                "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+                "shortName": " \"# \"@A035@0\"",
+                "pageName": "arsagera",
+                "description": "<div style=\"text-align: center;\"><font color=\"#ffffff\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>",
+                "logoURL": "site/org_291_logo.jpg",
+                "mainInformation": "<div style=\"text-align: justify;\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\r\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\"http://www.arsagera.ru\" target=\"_blank\">www.arsagera.ru</a></div>",
+                "addInformations": {
+                  "information": [
+                    {
+                      "header": "=D>@<0F8O > :><?0=88",
+                      "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+                    }
+                  ]
+                },
+                "products": {
+                  "funds": {
+                    "fund": [
+                      {
+                        "id": 1213,
+                        "updateDate": "2018-04-28T11:37:29",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+                        "type": 1,
+                        "pageName": "fond_smeshannyh_investicij",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 4959.9,
+                        "navAll": 132232148.75,
+                        "period": 12,
+                        "incomeOne": 20.12,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1214,
+                        "updateDate": "2018-04-28T11:36:11",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+                        "type": 1,
+                        "pageName": "fond_akcij",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 7136.98,
+                        "navAll": 421895130.97,
+                        "period": 12,
+                        "incomeOne": 20.77,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1252,
+                        "updateDate": "2018-04-28T11:34:25",
+                        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+                        "type": 1,
+                        "pageName": "fond_obligacij_kr_155",
+                        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+                        "dataDate": "2018-04-26",
+                        "navOne": 1579.29,
+                        "navAll": 59370976.35,
+                        "period": 12,
+                        "incomeOne": 10.41,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1220,
+                        "updateDate": "2018-04-18T17:53:54",
+                        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+                        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+                        "type": 2,
+                        "pageName": "akcii_64",
+                        "buyOnlineURL": "none",
+                        "dataDate": "2018-03-30",
+                        "navOne": 5728.85,
+                        "navAll": 386284599.81,
+                        "period": 12,
+                        "incomeOne": 22.67,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      },
+                      {
+                        "id": 1251,
+                        "updateDate": "2018-04-18T17:38:05",
+                        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+                        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+                        "type": 2,
+                        "pageName": "akcii_mira",
+                        "buyOnlineURL": "none",
+                        "dataDate": "2018-03-30",
+                        "navOne": 1104.78,
+                        "navAll": 46125241.36,
+                        "period": 12,
+                        "incomeOne": 14.07,
+                        "minInvestSum": 1000.0,
+                        "minReInvestSum": 1000.0
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Sat, 28 Apr 2018 11:10:53 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/investors/create": {
+      "post": {
+        "description": "###  538AB@0F8O 8=25AB>@0\n\n5B>4 ?@54=07=0G5= 4;O A>740=8O 8=25AB>@0.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0",
+        "summary": "/api/External/investors/create",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "InvestorsCreatePost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1api~1External~1investors~1createRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/investors/{prtld}": {
+      "get": {
+        "description": "### >;CG5=85 40==KE 8=25AB>@0\n5B>4 4;O ?>;CG5=8O 8=D>@<0F88 ?@>D8;O 8=25AB>@0.\n\n#### =D>@<0F8>==K5 ?>;O >B25B0",
+        "summary": "/api/External/investors/:prtld",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "InvestorsByPrtldGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "prtld",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "5B>4 4;O >1=>2;5=8O 8=D>@<0F88 ?@>D8;O.",
+        "summary": "/api/External/investors/:prtld",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "InvestorsByPrtldPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "prtld",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1api~1External~1investors~1%3AprtldRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/investors/{prtId}/accounts": {
+      "get": {
+        "description": "### >;CG5=85 @55AB@0 AG5B>2 8=25AB>@0\n5B>4 ?@54=07=0G5= 4;O ?>;CG5=8O @55AB@0 AG5B>2 8=25AB>@0. 5B>4 8A?>;L7C5BAO 4;O D>@<8@>20=8O A?8A:0 AG5B>2 ?@8 A>740=88 70?@>A>2 2K?8A>: (>1KG=KE 8 @0AH8@5==KE) 8 70O2>: =0 >1<5= 8 ?>30H5=85 ?052.\n\n\n\n#### =D>@<0F8>==K5 ?>;O >B25B0\n\n| 0@0<5B@ | "8? |?8A0=85|\n| --------- | ----------- | -----------|\n|`account` | `string` |><5@ ;8F52>3> AG5B0 8=25AB>@0.|\n|`orgName[like]`|`string`| 08<5=>20=85 >@30=870F88|\n|`fundName[like]`|`string`|08<5=>20=85 $.|\n|`sortBy`|`string`|>@O4>: A>@B8@>2:8 40==KE.  0745;8B5;L - 70?OB0O. >?CAB8<K5 ?>;O: `orgName`, `fundName`, `account`, `fundId` @8<5@ 70?8A8: `orgName.asc,fundName.desc`|\n|`page`|`int`|><5@ AB@0=8FK A 40==K<8. =0G5=85 ?> C<>;G0=8N  `1`|\n|`pageSize`|`int`|>;8G5AB2> 70?8A59 =0 AB@0=8F5. =0G5=85 ?> C<>;G0=8N  `10`|\n|`extFileds`|`string`|!?8A>: 4>?>;=8B5;L=KE ?>;59, 2:;NG05<KE 2 >B25B ?> 70?@>AC.  :0G5AB25 @0745;8B5;O 8A?>;L7C5BAO 70?OB0O. >ABC?=K5 7=0G5=8O: `orgName`  =08<5=>20=85 #, `fundName`  =08<5=>20=85 $, `quantity`  :>;8G5AB2> ?052 =0 AG5B5.`|",
+        "summary": "/api/External/investors/:prtId/accounts",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "InvestorsAccountsByPrtIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "prtId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "45=B8D8:0B>@ 8=25AB>@0"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/investors/{prtld}/documents": {
+      "get": {
+        "description": "5B>4 4;O ?>;CG5=8O @55AB@0 4>:C<5=B>2 8=25AB>@0. 5B>4 8A?>;L7C5B ?>AB@0=8G=CN @07182:C @57C;LB0B0 2 >B25B5.",
+        "summary": "/api/External/investors/:prtld/documents",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "InvestorsDocumentsByPrtldGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">4 AB0BCA0 4>:C<5=B0. $8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO\n?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,»\n(70?OB0O)."
+          },
+          {
+            "name": "dir",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">4 =0?@02;5=8O 4>:C<5=B0. >?CAB8<K5 7=0G5=8O:\n\n`0`  2A5 (8A?>;L7C5BAO ?> C<>;G0=8N);\n`1`  2E>4OI89;\n`2`  8AE>4OI89.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N."
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">4 B8?0 4>:C<5=B0.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N. >?CA:05BAO\n?5@540G0 =5A:>;L:8E 7=0G5=89 A @0745;8B5;5< «,»\n(70?OB0O)."
+          },
+          {
+            "name": "begDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "8=8<0;L=0O 40B0 A>740=8O 4>:C<5=B0\n\n(2:;NG8B5;L=>)"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "0:A8<0;L=0O 40B0 A>740=8O 4>:C<5=B0\n\n(2:;NG8B5;L=>)"
+          },
+          {
+            "name": "fundId",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">4 $.\n\n$8;LB@0F8O ?> B>G=><C A>2?045=8N."
+          },
+          {
+            "name": "orgName[like]",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "08<5=>20=85 >@30=870F88\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
+          },
+          {
+            "name": "fundName[like\n]",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "08<5=>20=85 $.\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
+          },
+          {
+            "name": "num[like]",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "><5@ 4>:C<5=B0.\n\n$8;LB@0F8O ?> <0A:5 %7=0G5=85%."
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">@O4>: A>@B8@>2:8 40==KE.  :0G5AB25\n@0745;8B5;O 8A?>;L7C5BAO 70?OB0O.\n>?CAB8<K5 ?>;O:\n`dir`, `num`, `type`, `orgName`, `fundName`, `status`, `date`\n@8<5@ 70?8A8:\n`orgName.asc`,`fundName.desc`"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "><5@ AB@0=8FK A 40==K<8."
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ">;8G5AB2> 70?8A59 =0 AB@0=8F5."
+          },
+          {
+            "name": "extFields",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "!?8A>: 4>?>;=8B5;L=KE ?>;59, 2:;NG05<KE 2 >B25B\n?> 70?@>AC.  :0G5AB25 @0745;8B5;O 8A?>;L7C5BAO 70?OB0O.\n>ABC?=K5 7=0G5=8O:\n`docName`  =08<5=>20=85 4>:C<5=B0,\n`statusName`  =08<5=>20=85 AB0BCA0 4>:C<5=B0,\n`orgName`  =08<5=>20=85 #,\n`fundName`  =08<5=>20=85 $."
+          },
+          {
+            "name": "prtld",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/oauth/token": {
+      "post": {
+        "description": "5B>4 ?@54=07=0G5= 4;O >1<5=0 2@5<5==>3> :>40 02B>@870F88,\r\n?>;CG5==>3> ?@8 02B>@870F88 ?>;L7>20B5;O, =0 B>:5= 4>ABC?0, 8A?>;L7C5<K9 4;O\r\n@01>BK ?@8;>65=8O 8 B>:5= >1=>2;5=8O, 8A?>;L7C5<K9 4;O >1=>2;5=8O B>:5=0\r\n4>ABC?0 2 A;CG05 8AB5G5=8O 53> A@>:0 459AB28O.",
+        "summary": "token",
+        "tags": [
+          "=25AB>@K"
+        ],
+        "operationId": "OauthTokenPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "845=B8D8:0B>@ ?@8;>65=8O;"
+          },
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "B8? >?5@0F88 (70?@>A B>:5=0);"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "redirect_uri",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "client_secret",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/list/{listname}": {
+      "get": {
+        "description": "### >;CG5=85 40==KE A?@02>G=8:0\n\n1O70B5;L=K5 2E>4=K5 ?0@0<5B@K: `listName` - =0720=85 A?@02>G=8:0. \n\n#### >ABC?=K5 7=0G5=8O:\n`fundTypes` - B8?K $.\n\n`fundStructureTypes` - B8?K 0:B82>2, 2E>4OI8E 2 AB@C:BC@C $.",
+        "summary": "api/External/list/{listName}",
+        "tags": [
+          "!?@02>G=8:8"
+        ],
+        "operationId": "ListByListnameGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "listname",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/~1list~1fundTypes"
+            },
+            "examples": {
+              "application/json": {
+                "listItem": [
+                  {
+                    "code": 1,
+                    "name": "$",
+                    "shortName": ">B:@KBK9"
+                  },
+                  {
+                    "code": 2,
+                    "name": "$",
+                    "shortName": "8=B5@20;L=K9"
+                  },
+                  {
+                    "code": 3,
+                    "name": "$",
+                    "shortName": "70:@KBK9"
+                  }
+                ]
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Credentials": {
+                "type": "string",
+                "default": "true"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string",
+                "default": "Authorization"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string",
+                "default": "GET, OPTIONS"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Content-Length": {
+                "type": "string",
+                "default": "202"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Wed, 25 Apr 2018 14:36:18 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx/1.10.3 (Ubuntu)"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "fund": {
+      "title": "fund",
+      "example": {
+        "id": 1220,
+        "updateDate": "2018-04-18T17:53:54",
+        "prtId": 291,
+        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+        "type": 2,
+        "pageName": "akcii_64",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-03-30",
+        "navOne": 5728.85,
+        "navAll": 386284599.81,
+        "period": 12,
+        "incomeOne": 22.67,
+        "navOnePrev": 5775.02,
+        "navAllPrev": 385679568.73,
+        "dailyIncomeOne": -0.8,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0,
+        "companyShortName": " \"# \"@A035@0\"",
+        "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
+    "api/External/fund/959": {
+      "title": "api/External/fund/959",
+      "example": {
+        "id": 959,
+        "updateDate": "2018-04-18T17:50:21",
+        "prtId": 169,
+        "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"0;NB=K9 @575@2\"",
+        "type": 1,
+        "pageName": "vz",
+        "buyOnlineURL": "none",
+        "shortDescr": "<font color=\"#9C9C94\">-B> 20;NB=K9 (4>;;0@, 52@>) >1;830F8>==K9 D>=4, >A=>2C ?>@BD5;O :>B>@>3> A>AB02;ONB 3>AC40@AB25==K5 8 :>@?>@0B82=K5 >1;830F88 254CI8E :>@?>@0F89 <8@0.</font>",
+        "fullDescr": "$ @D8 «0;NB=K9 @575@2»  MB> 20;NB=K9 (4>;;0@, 52@>) >1;830F8>==K9 D>=4, >A=>2C ?>@BD5;O :>B>@>3> A>AB02;ONB 3>AC40@AB25==K5 8 :>@?>@0B82=K5 >1;830F88 254CI8E :>@?>@0F89 <8@0.&nbsp; <br>",
+        "advantages": {
+          "advantage": [
+            {
+              "description": ":B82=> C?@02;O5<K9 D>=4, ?>@BD5;L >?B8<878@C5BAO 8AE>4O 87 A8BC0F88 =0 @K=:5"
+            },
+            {
+              "description": "48= 87 =081>;55 :>=A5@20B82=KE D>=4>2 2 ;8=59:5 «#»"
+            }
+          ]
+        },
+        "fees": {
+          "fee": [
+            {
+              "description": "0 C?@02;5=85 - 1.5% 2 3>4"
+            },
+            {
+              "description": "@8 ?>30H5=88 ?0O @0=55, G5< G5@57 365 4=O  0.5% >B AC<<K, G5@57 1 3>4 - 0.25% >B AC<<K"
+            }
+          ]
+        },
+        "fileLinks": {
+          "link": [
+            {
+              "url": "http://invmc.ru/funds/vz/",
+              "description": "@028;0 4>25@8B5;L=>3> C?@02;5=8O"
+            },
+            {
+              "url": "http://invmc.ru/funds/vz/",
+              "description": "BG5B=>ABL D>=40"
+            }
+          ]
+        },
+        "dataDate": "2018-04-24",
+        "navOne": 1069.54,
+        "navAll": 26754460.68,
+        "navOnePrev": 1061.65,
+        "navAllPrev": 26557215.2,
+        "dailyIncomeOne": 0.74,
+        "minInvestSum": 10000.0,
+        "minReInvestSum": 10000.0,
+        "incomes": {
+          "income": [
+            {
+              "period": 3,
+              "incomeOne": 7.57
+            },
+            {
+              "period": 4,
+              "incomeOne": 6.98
+            }
+          ]
+        },
+        "structure": {
+          "active": [
+            {
+              "type": 0,
+              "value": 11.36
+            },
+            {
+              "type": 1,
+              "value": 29.14
+            },
+            {
+              "type": 2,
+              "value": 35.58
+            },
+            {
+              "type": 3,
+              "value": 0.0
+            },
+            {
+              "type": 4,
+              "value": 0.0
+            },
+            {
+              "type": 5,
+              "value": 0.0
+            },
+            {
+              "type": 6,
+              "value": 0.0
+            },
+            {
+              "type": 7,
+              "value": 24.7
+            }
+          ]
+        },
+        "companyShortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+        "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+        "logoURL": "site/org_169_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "shortDescr": {
+          "type": "string"
+        },
+        "fullDescr": {
+          "type": "string"
+        },
+        "advantages": {
+          "$ref": "#/definitions/Advantages"
+        },
+        "fees": {
+          "$ref": "#/definitions/Fees"
+        },
+        "fileLinks": {
+          "$ref": "#/definitions/FileLinks"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "incomes": {
+          "$ref": "#/definitions/Incomes"
+        },
+        "structure": {
+          "$ref": "#/definitions/Structure"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "shortDescr",
+        "fullDescr",
+        "advantages",
+        "fees",
+        "fileLinks",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "incomes",
+        "structure",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
+    "Advantages": {
+      "title": "Advantages",
+      "example": {
+        "advantage": [
+          {
+            "description": ":B82=> C?@02;O5<K9 D>=4, ?>@BD5;L >?B8<878@C5BAO 8AE>4O 87 A8BC0F88 =0 @K=:5"
+          },
+          {
+            "description": "48= 87 =081>;55 :>=A5@20B82=KE D>=4>2 2 ;8=59:5 «#»"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "advantage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Advantage"
+          }
+        }
+      },
+      "required": [
+        "advantage"
+      ]
+    },
+    "Advantage": {
+      "title": "Advantage",
+      "example": {
+        "description": ":B82=> C?@02;O5<K9 D>=4, ?>@BD5;L >?B8<878@C5BAO 8AE>4O 87 A8BC0F88 =0 @K=:5"
+      },
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description"
+      ]
+    },
+    "Fees": {
+      "title": "Fees",
+      "example": {
+        "fee": [
+          {
+            "description": "0 C?@02;5=85 - 1.5% 2 3>4"
+          },
+          {
+            "description": "@8 ?>30H5=88 ?0O @0=55, G5< G5@57 365 4=O  0.5% >B AC<<K, G5@57 1 3>4 - 0.25% >B AC<<K"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "fee": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Fee"
+          }
+        }
+      },
+      "required": [
+        "fee"
+      ]
+    },
+    "Fee": {
+      "title": "Fee",
+      "example": {
+        "description": "0 C?@02;5=85 - 1.5% 2 3>4"
+      },
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description"
+      ]
+    },
+    "FileLinks": {
+      "title": "FileLinks",
+      "example": {
+        "link": [
+          {
+            "url": "http://invmc.ru/funds/vz/",
+            "description": "@028;0 4>25@8B5;L=>3> C?@02;5=8O"
+          },
+          {
+            "url": "http://invmc.ru/funds/vz/",
+            "description": "BG5B=>ABL D>=40"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "required": [
+        "link"
+      ]
+    },
+    "Link": {
+      "title": "Link",
+      "example": {
+        "url": "http://invmc.ru/funds/vz/",
+        "description": "@028;0 4>25@8B5;L=>3> C?@02;5=8O"
+      },
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "description"
+      ]
+    },
+    "Incomes": {
+      "title": "Incomes",
+      "example": {
+        "income": [
+          {
+            "period": 3,
+            "incomeOne": 7.57
+          },
+          {
+            "period": 4,
+            "incomeOne": 6.98
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "income": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Income"
+          }
+        }
+      },
+      "required": [
+        "income"
+      ]
+    },
+    "Income": {
+      "title": "Income",
+      "example": {
+        "period": 3,
+        "incomeOne": 7.57
+      },
+      "type": "object",
+      "properties": {
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "period",
+        "incomeOne"
+      ]
+    },
+    "Structure": {
+      "title": "Structure",
+      "example": {
+        "active": [
+          {
+            "type": 0,
+            "value": 11.36
+          },
+          {
+            "type": 1,
+            "value": 29.14
+          },
+          {
+            "type": 2,
+            "value": 35.58
+          },
+          {
+            "type": 3,
+            "value": 0.0
+          },
+          {
+            "type": 4,
+            "value": 0.0
+          },
+          {
+            "type": 5,
+            "value": 0.0
+          },
+          {
+            "type": 6,
+            "value": 0.0
+          },
+          {
+            "type": 7,
+            "value": 24.7
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Active"
+          }
+        }
+      },
+      "required": [
+        "active"
+      ]
+    },
+    "Active": {
+      "title": "Active",
+      "example": {
+        "type": 0,
+        "value": 11.36
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "value": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ]
+    },
+    "api/External/fund/959/income?period=3": {
+      "title": "api/External/fund/959/income?period=3",
+      "example": {
+        "begNavOne": 994.27,
+        "endNavOne": 1069.54,
+        "incomeOne": 7.57
+      },
+      "type": "object",
+      "properties": {
+        "begNavOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "endNavOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "begNavOne",
+        "endNavOne",
+        "incomeOne"
+      ]
+    },
+    "/api/External/fund/959/nav": {
+      "title": "/api/External/fund/959/nav",
+      "example": {
+        "dataDate": "2017-12-14",
+        "navOne": 999.72,
+        "navAll": 25017909.91
+      },
+      "type": "object",
+      "properties": {
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "dataDate",
+        "navOne",
+        "navAll"
+      ]
+    },
+    "company": {
+      "title": "company",
+      "example": {
+        "prtId": 291,
+        "updateDate": "2018-04-04T18:35:01",
+        "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "shortName": " \"# \"@A035@0\"",
+        "pageName": "arsagera",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "prtId",
+        "updateDate",
+        "name",
+        "shortName",
+        "pageName",
+        "logoURL"
+      ]
+    },
+    "api/External/company/291": {
+      "title": "api/External/company/291",
+      "example": {
+        "prtId": 291,
+        "updateDate": "2018-04-04T18:35:01",
+        "name": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "shortName": " \"# \"@A035@0\"",
+        "pageName": "arsagera",
+        "description": "<div style=\"text-align: center;\"><font color=\"#ffffff\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4.</font></div>",
+        "logoURL": "site/org_291_logo.jpg",
+        "mainInformation": "<div style=\"text-align: justify;\">#A;C38 ?> 4>25@8B5;L=><C C?@02;5=8N >:07K20NBAO C1;8G=K< 0:F8>=5@=K< >1I5AB2>< «#?@02;ONI0O :><?0=8O «@A035@0». 8F5=788: =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N 8=25AB8F8>==K<8 D>=40<8, ?052K<8 8=25AB8F8>==K<8 D>=40<8 8 =53>AC40@AB25==K<8 ?5=A8>==K<8 D>=40<8  21-000-1-00714 >B 06 0?@5;O 2010 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O; ?@>D5AA8>=0;L=>3> CG0AB=8:0 @K=:0 F5==KE 1C<03 =0 >ACI5AB2;5=85 45OB5;L=>AB8 ?> C?@02;5=8N F5==K<8 1C<030<8  040-10982-001000 >B 31 O=20@O 2008 3>40 2K40=0 $545@0;L=>9 A;C61>9 ?> D8=0=A>2K< @K=:0< 157 >3@0=8G5=8O A@>:0 459AB28O. >4@>1=CN 8=D>@<0F8N > 45OB5;L=>AB8  «# «@A035@0» 8 ?052KE 8=25AB8F8>==KE D>=4>2, =0E>4OI8EAO ?>4 55 C?@02;5=85<, 2:;NG0O B5:ABK ?@028; 4>25@8B5;L=>3> C?@02;5=8O, 2A5E 87<5=5=89 8 4>?>;=5=89 : =8<, 0 B0:65 A2545=8O > <5AB0E ?@85<0 70O2>: =0 ?@8>1@5B5=85, ?>30H5=85 8 >1<5= 8=25AB8F8>==KE ?052 K <>65B5\r\n?>;CG8BL ?> 04@5AC 194021, !0=:B-5B5@1C@3, C;. (0B5;5=0, 4>< 26, ?><. 1-,."5;5D>=: (812) 313-05-30, 0 B0:65 =0 A09B5  «# «@A035@0» 2 A5B8 =B5@=5B ?> 04@5AC: <a href=\"http://www.arsagera.ru\" target=\"_blank\">www.arsagera.ru</a></div>",
+        "addInformations": {
+          "information": [
+            {
+              "header": "=D>@<0F8O > :><?0=88",
+              "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+            }
+          ]
+        },
+        "products": {
+          "funds": {
+            "fund": [
+              {
+                "id": 1213,
+                "updateDate": "2018-04-28T11:37:29",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+                "type": 1,
+                "pageName": "fond_smeshannyh_investicij",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 4959.9,
+                "navAll": 132232148.75,
+                "period": 12,
+                "incomeOne": 20.12,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1214,
+                "updateDate": "2018-04-28T11:36:11",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+                "type": 1,
+                "pageName": "fond_akcij",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 7136.98,
+                "navAll": 421895130.97,
+                "period": 12,
+                "incomeOne": 20.77,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1252,
+                "updateDate": "2018-04-28T11:34:25",
+                "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+                "type": 1,
+                "pageName": "fond_obligacij_kr_155",
+                "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+                "dataDate": "2018-04-26",
+                "navOne": 1579.29,
+                "navAll": 59370976.35,
+                "period": 12,
+                "incomeOne": 10.41,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1220,
+                "updateDate": "2018-04-18T17:53:54",
+                "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+                "shortName": "$ \"@A035@0-0:F88 6.4\"",
+                "type": 2,
+                "pageName": "akcii_64",
+                "buyOnlineURL": "none",
+                "dataDate": "2018-03-30",
+                "navOne": 5728.85,
+                "navAll": 386284599.81,
+                "period": 12,
+                "incomeOne": 22.67,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              },
+              {
+                "id": 1251,
+                "updateDate": "2018-04-18T17:38:05",
+                "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+                "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+                "type": 2,
+                "pageName": "akcii_mira",
+                "buyOnlineURL": "none",
+                "dataDate": "2018-03-30",
+                "navOne": 1104.78,
+                "navAll": 46125241.36,
+                "period": 12,
+                "incomeOne": 14.07,
+                "minInvestSum": 1000.0,
+                "minReInvestSum": 1000.0
+              }
+            ]
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        },
+        "mainInformation": {
+          "type": "string"
+        },
+        "addInformations": {
+          "$ref": "#/definitions/AddInformations"
+        },
+        "products": {
+          "$ref": "#/definitions/Products"
+        }
+      },
+      "required": [
+        "prtId",
+        "updateDate",
+        "name",
+        "shortName",
+        "pageName",
+        "description",
+        "logoURL",
+        "mainInformation",
+        "addInformations",
+        "products"
+      ]
+    },
+    "AddInformations": {
+      "title": "AddInformations",
+      "example": {
+        "information": [
+          {
+            "header": "=D>@<0F8O > :><?0=88",
+            "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "information": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Information"
+          }
+        }
+      },
+      "required": [
+        "information"
+      ]
+    },
+    "Information": {
+      "title": "Information",
+      "example": {
+        "header": "=D>@<0F8O > :><?0=88",
+        "content": "<div style=\"text-align: justify;\"> «#?@02;ONI0O :><?0=8O «@A035@0»  ?5@20O 2  >AA88 C?@02;ONI0O :><?0=8O, 0:F88 :>B>@>9 >1@0I0NBAO =0 18@65. ><?0=8O C?@02;O5B ?052K<8 8=25AB8F8>==K<8 D>=40<8 ($0<8) 8 ?@54>AB02;O5B CA;C38 8=48284C0;L=>3> 4>25@8B5;L=>3> C?@02;5=8O (#). ><?0=8O 1K;0 A>740=0 2 2004 3>40, 0 2 2005 3>4C 1K;8 70?CI5=K ?5@2K5 420 D>=40 ?>4 C?@02;5=85< :><?0=88. !59G0A ?>4 C?@02;5=85< :><?0=88 =0E>4OBAO B@8 >B:@KBKE D>=40, 420 8=B5@20;L=KE 8 >48= 70:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4. @8 ?><>I8 $>2 ?>4 C?@02;5=85< # «@A035@0» :064K9 65;0NI89 <>65B 8=25AB8@>20BL A2>8 A15@565=8O =0 D>=4>2K9 @K=>: 8 @K=>: =542868<>AB8, GB> 2 A2>N >G5@54L 70I8B8B 8E >B 8=D;OF88 8 C25;8G8B 1;03>A>AB>O=85 8=25AB>@0 2 4>;3>A@>G=>9 ?5@A?5:B825.</div>"
+      },
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "header",
+        "content"
+      ]
+    },
+    "Products": {
+      "title": "Products",
+      "example": {
+        "funds": {
+          "fund": [
+            {
+              "id": 1213,
+              "updateDate": "2018-04-28T11:37:29",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+              "type": 1,
+              "pageName": "fond_smeshannyh_investicij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 4959.9,
+              "navAll": 132232148.75,
+              "period": 12,
+              "incomeOne": 20.12,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1214,
+              "updateDate": "2018-04-28T11:36:11",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+              "type": 1,
+              "pageName": "fond_akcij",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 7136.98,
+              "navAll": 421895130.97,
+              "period": 12,
+              "incomeOne": 20.77,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1252,
+              "updateDate": "2018-04-28T11:34:25",
+              "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+              "type": 1,
+              "pageName": "fond_obligacij_kr_155",
+              "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+              "dataDate": "2018-04-26",
+              "navOne": 1579.29,
+              "navAll": 59370976.35,
+              "period": 12,
+              "incomeOne": 10.41,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1220,
+              "updateDate": "2018-04-18T17:53:54",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+              "shortName": "$ \"@A035@0-0:F88 6.4\"",
+              "type": 2,
+              "pageName": "akcii_64",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 5728.85,
+              "navAll": 386284599.81,
+              "period": 12,
+              "incomeOne": 22.67,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            },
+            {
+              "id": 1251,
+              "updateDate": "2018-04-18T17:38:05",
+              "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+              "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+              "type": 2,
+              "pageName": "akcii_mira",
+              "buyOnlineURL": "none",
+              "dataDate": "2018-03-30",
+              "navOne": 1104.78,
+              "navAll": 46125241.36,
+              "period": 12,
+              "incomeOne": 14.07,
+              "minInvestSum": 1000.0,
+              "minReInvestSum": 1000.0
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "funds": {
+          "$ref": "#/definitions/Funds"
+        }
+      },
+      "required": [
+        "funds"
+      ]
+    },
+    "Funds": {
+      "title": "Funds",
+      "example": {
+        "fund": [
+          {
+            "id": 1213,
+            "updateDate": "2018-04-28T11:37:29",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+            "type": 1,
+            "pageName": "fond_smeshannyh_investicij",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 4959.9,
+            "navAll": 132232148.75,
+            "period": 12,
+            "incomeOne": 20.12,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1214,
+            "updateDate": "2018-04-28T11:36:11",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 0:F89\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - $\"",
+            "type": 1,
+            "pageName": "fond_akcij",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1214&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 7136.98,
+            "navAll": 421895130.97,
+            "period": 12,
+            "incomeOne": 20.77,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1252,
+            "updateDate": "2018-04-28T11:34:25",
+            "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 >1;830F89   1.55\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 -   1.55\"",
+            "type": 1,
+            "pageName": "fond_obligacij_kr_155",
+            "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1252&utm_agent=",
+            "dataDate": "2018-04-26",
+            "navOne": 1579.29,
+            "navAll": 59370976.35,
+            "period": 12,
+            "incomeOne": 10.41,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1220,
+            "updateDate": "2018-04-18T17:53:54",
+            "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+            "shortName": "$ \"@A035@0-0:F88 6.4\"",
+            "type": 2,
+            "pageName": "akcii_64",
+            "buyOnlineURL": "none",
+            "dataDate": "2018-03-30",
+            "navOne": 5728.85,
+            "navAll": 386284599.81,
+            "period": 12,
+            "incomeOne": 22.67,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          },
+          {
+            "id": 1251,
+            "updateDate": "2018-04-18T17:38:05",
+            "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - 0:F88 8@0\"",
+            "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - \"",
+            "type": 2,
+            "pageName": "akcii_mira",
+            "buyOnlineURL": "none",
+            "dataDate": "2018-03-30",
+            "navOne": 1104.78,
+            "navAll": 46125241.36,
+            "period": 12,
+            "incomeOne": 14.07,
+            "minInvestSum": 1000.0,
+            "minReInvestSum": 1000.0
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "fund": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Fund1"
+          }
+        }
+      },
+      "required": [
+        "fund"
+      ]
+    },
+    "Fund1": {
+      "title": "Fund1",
+      "example": {
+        "id": 1213,
+        "updateDate": "2018-04-28T11:37:29",
+        "name": ">B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - D>=4 A<5H0==KE 8=25AB8F89\"",
+        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \"@A035@0 - !\"",
+        "type": 1,
+        "pageName": "fond_smeshannyh_investicij",
+        "buyOnlineURL": "https://my.platform.finance/utm_redirect?utm_url=main%3fsysname%3dbidbuy_edit%26prodid%3d1213&utm_agent=",
+        "dataDate": "2018-04-26",
+        "navOne": 4959.9,
+        "navAll": 132232148.75,
+        "period": 12,
+        "incomeOne": 20.12,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "minInvestSum",
+        "minReInvestSum"
+      ]
+    },
+    "funds1": {
+      "title": "funds1",
+      "example": {
+        "id": 1220,
+        "updateDate": "2018-04-18T17:53:54",
+        "prtId": 291,
+        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+        "type": 2,
+        "pageName": "akcii_64",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-03-30",
+        "navOne": 5728.85,
+        "navAll": 386284599.81,
+        "period": 12,
+        "incomeOne": 22.67,
+        "navOnePrev": 5775.02,
+        "navAllPrev": 385679568.73,
+        "dailyIncomeOne": -0.8,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0,
+        "companyShortName": " \"# \"@A035@0\"",
+        "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
+    "/api/External/investors/createRequest": {
+      "title": "/api/External/investors/createRequest",
+      "example": {
+        "ClientCurrencyId": 0,
+        "ClientCountryId": 0,
+        "UiLanguageId": 0,
+        "Name": "string",
+        "Address": "string",
+        "Email": "string",
+        "CC": "string",
+        "PhoneNumber": "string",
+        "Vat": "string"
+      },
+      "type": "object",
+      "properties": {
+        "ClientCurrencyId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ClientCountryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "UiLanguageId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "CC": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        },
+        "Vat": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ClientCurrencyId",
+        "ClientCountryId",
+        "UiLanguageId",
+        "Name",
+        "Address",
+        "Email",
+        "CC",
+        "PhoneNumber",
+        "Vat"
+      ]
+    },
+    "/api/External/investors/:prtldRequest": {
+      "title": "/api/External/investors/:prtldRequest",
+      "example": {
+        "ClientCurrencyId": 0,
+        "ClientCountryId": 0,
+        "UiLanguageId": 0,
+        "Name": "string",
+        "Address": "string",
+        "Email": "string",
+        "CC": "string",
+        "PhoneNumber": "string",
+        "Vat": "string"
+      },
+      "type": "object",
+      "properties": {
+        "ClientCurrencyId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ClientCountryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "UiLanguageId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "CC": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        },
+        "Vat": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ClientCurrencyId",
+        "ClientCountryId",
+        "UiLanguageId",
+        "Name",
+        "Address",
+        "Email",
+        "CC",
+        "PhoneNumber",
+        "Vat"
+      ]
+    },
+    "/list/fundTypes": {
+      "title": "/list/fundTypes",
+      "example": {
+        "listItem": [
+          {
+            "code": 1,
+            "name": "$",
+            "shortName": ">B:@KBK9"
+          },
+          {
+            "code": 2,
+            "name": "$",
+            "shortName": "8=B5@20;L=K9"
+          },
+          {
+            "code": 3,
+            "name": "$",
+            "shortName": "70:@KBK9"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "listItem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ListItem"
+          }
+        }
+      },
+      "required": [
+        "listItem"
+      ]
+    },
+    "ListItem": {
+      "title": "ListItem",
+      "example": {
+        "code": 1,
+        "name": "$",
+        "shortName": ">B:@KBK9"
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "shortName"
+      ]
+    }
+  },
+  "security": [
+    {
+      "auth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "$>=4K",
+      "description": "#### $>=4K\n\n\n"
+    },
+    {
+      "name": "#?@02;ONI85 :><?0=88"
+    },
+    {
+      "name": "=25AB>@K",
+      "description": "=25AB>@K. !>740=85, 87<5=5=85, 40==K5 :;85=B0, AG5B0, 4>:C<5=BK."
+    },
+    {
+      "name": "!?@02>G=8:8"
+    },
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
