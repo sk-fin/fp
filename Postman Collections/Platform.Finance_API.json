@@ -30,7 +30,7 @@
         "tags": [
           "$>=4K"
         ],
-        "operationId": "FundsGet",
+        "operationId": "api/External/funds",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -372,7 +372,7 @@
         "tags": [
           "$>=4K"
         ],
-        "operationId": "Fund959Get",
+        "operationId": "api/External/fund/:fundId",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -560,7 +560,7 @@
         "tags": [
           "$>=4K"
         ],
-        "operationId": "FundIncomeByFundIdGet",
+        "operationId": "api/External/fund/:fundId/income",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -644,7 +644,7 @@
         "tags": [
           "$>=4K"
         ],
-        "operationId": "FundNavByFundIdGet",
+        "operationId": "api/External/fund/:fundId/nav",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1162,7 +1162,7 @@
         "tags": [
           "$>=4K"
         ],
-        "operationId": "BidFundGet",
+        "operationId": "/api/External/bidFund",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1214,7 +1214,7 @@
         "tags": [
           "#?@02;ONI85 :><?0=88"
         ],
-        "operationId": "CompaniesGet",
+        "operationId": "api/External/companies",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1322,7 +1322,7 @@
         "tags": [
           "#?@02;ONI85 :><?0=88"
         ],
-        "operationId": "CompanyByPrtIdGet",
+        "operationId": "api/External/company/:prtId",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1505,7 +1505,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "InvestorsCreatePost",
+        "operationId": "/api/External/investors/create",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1550,7 +1550,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "InvestorsByPrtldGet",
+        "operationId": "/api/External/investors/:prtld",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1584,7 +1584,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "InvestorsByPrtldPost",
+        "operationId": "Post/api/External/investors/:prtld",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1636,7 +1636,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "InvestorsAccountsByPrtIdGet",
+        "operationId": "/api/External/investors/:prtId/accounts",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1673,7 +1673,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "InvestorsDocumentsByPrtldGet",
+        "operationId": "/api/External/investors/:prtld/documents",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1800,7 +1800,7 @@
         "tags": [
           "=25AB>@K"
         ],
-        "operationId": "OauthTokenPost",
+        "operationId": "token",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1864,7 +1864,7 @@
         "tags": [
           "!?@02>G=8:8"
         ],
-        "operationId": "ListByListnameGet",
+        "operationId": "api/External/list/{listName}",
         "deprecated": false,
         "produces": [
           "application/json"
