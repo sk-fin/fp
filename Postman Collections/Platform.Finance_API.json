@@ -62,7 +62,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -402,7 +402,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/api~1External~1fund~1959"
             },
@@ -592,7 +592,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/api~1External~1fund~1959~1income%3Fperiod%3D3"
             },
@@ -682,7 +682,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1230,7 +1230,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1346,7 +1346,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/api~1External~1company~1291"
             },
@@ -1893,7 +1893,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "OK",
             "schema": {
               "$ref": "#/definitions/~1list~1fundTypes"
             },
@@ -1946,6 +1946,18 @@
               "Server": {
                 "type": "string",
                 "default": "nginx/1.10.3 (Ubuntu)"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
               }
             }
           }
