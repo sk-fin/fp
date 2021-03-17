@@ -2093,6 +2093,387 @@
         "logoURL"
       ]
     },
+    "funds?company=169": {
+      "title": "funds?company=169",
+      "example": {
+        "id": 957,
+        "updateDate": "2018-04-19T13:45:41",
+        "prtId": 169,
+        "name": "B:@KBK9 ?052>9 8=25AB8F8>==K9 D>=4 @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \";Q=:0 - 0?8B0;\"",
+        "shortName": "$ @K=>G=KE D8=0=A>2KE 8=AB@C<5=B>2 \";Q=:0  0?8B0;\"",
+        "type": 1,
+        "pageName": "ak",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-04-19",
+        "navOne": 5064.0,
+        "navAll": 93600301.2,
+        "period": 5,
+        "incomeOne": 1.31,
+        "navOnePrev": 5053.1,
+        "navAllPrev": 95296962.2,
+        "dailyIncomeOne": 0.22,
+        "minInvestSum": 10000.0,
+        "minReInvestSum": 10000.0,
+        "companyShortName": " \"# \"=25AB 5=546<5=B &5=B@\"",
+        "companyName": "1I5AB2> A >3@0=8G5==>9 >B25BAB25==>ABLN \"#?@02;ONI0O :><?0=8O \"=25AB 5=546<5=B &5=B@\"",
+        "logoURL": "site/org_169_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
+    "funds?type=2": {
+      "title": "funds?type=2",
+      "example": {
+        "id": 1220,
+        "updateDate": "2018-04-18T17:53:54",
+        "prtId": 291,
+        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+        "type": 2,
+        "pageName": "akcii_64",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-03-30",
+        "navOne": 5728.85,
+        "navAll": 386284599.81,
+        "period": 12,
+        "incomeOne": 22.67,
+        "navOnePrev": 5775.02,
+        "navAllPrev": 385679568.73,
+        "dailyIncomeOne": -0.8,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0,
+        "companyShortName": " \"# \"@A035@0\"",
+        "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
+    "/api/External/fund": {
+      "title": "/api/External/fund",
+      "example": {
+        "id": 1220,
+        "updateDate": "2018-04-18T17:53:54",
+        "prtId": 291,
+        "name": "=B5@20;L=K9 ?052>9 8=25AB8F8>==K9 D>=4 0:F89 \"@A035@0 - 0:F88 6.4\"",
+        "shortName": "$ \"@A035@0-0:F88 6.4\"",
+        "type": 2,
+        "pageName": "akcii_64",
+        "buyOnlineURL": "none",
+        "dataDate": "2018-03-30",
+        "navOne": 5728.85,
+        "navAll": 386284599.81,
+        "period": 12,
+        "incomeOne": 22.67,
+        "navOnePrev": 5775.02,
+        "navAllPrev": 385679568.73,
+        "dailyIncomeOne": -0.8,
+        "minInvestSum": 1000.0,
+        "minReInvestSum": 1000.0,
+        "companyShortName": " \"# \"@A035@0\"",
+        "companyName": "?C1;8G=>5 0:F8>=5@=>5 >1I5AB2> \"#?@02;ONI0O :><?0=8O \"@A035@0\"",
+        "logoURL": "site/org_291_logo.jpg"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "prtId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageName": {
+          "type": "string"
+        },
+        "buyOnlineURL": {
+          "type": "string"
+        },
+        "dataDate": {
+          "type": "string"
+        },
+        "navOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAll": {
+          "type": "number",
+          "format": "double"
+        },
+        "period": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "navOnePrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "navAllPrev": {
+          "type": "number",
+          "format": "double"
+        },
+        "dailyIncomeOne": {
+          "type": "number",
+          "format": "double"
+        },
+        "minInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "minReInvestSum": {
+          "type": "number",
+          "format": "double"
+        },
+        "companyShortName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "logoURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "updateDate",
+        "prtId",
+        "name",
+        "shortName",
+        "type",
+        "pageName",
+        "buyOnlineURL",
+        "dataDate",
+        "navOne",
+        "navAll",
+        "period",
+        "incomeOne",
+        "navOnePrev",
+        "navAllPrev",
+        "dailyIncomeOne",
+        "minInvestSum",
+        "minReInvestSum",
+        "companyShortName",
+        "companyName",
+        "logoURL"
+      ]
+    },
     "api/External/fund/959": {
       "title": "api/External/fund/959",
       "example": {
@@ -3445,6 +3826,65 @@
         "code",
         "name",
         "shortName"
+      ]
+    },
+    "list/fundStructureTypes": {
+      "title": "list/fundStructureTypes",
+      "example": {
+        "listItem": [
+          {
+            "code": 0,
+            "name": "5=56=K5 A@54AB20",
+            "shortName": "Money"
+          },
+          {
+            "code": 1,
+            "name": "&5==K5 1C<038 @>AA89A:8E M<8B5=B>2",
+            "shortName": "Russian_Securities"
+          },
+          {
+            "code": 2,
+            "name": "&5==K5 1C<038 8=>AB@0==KE M<8B5=B>2",
+            "shortName": "Foreign_Securities"
+          },
+          {
+            "code": 3,
+            "name": "542868<>5 8<CI5AB2>",
+            "shortName": "Real_Estate"
+          },
+          {
+            "code": 4,
+            "name": "<CI5AB25==K5 ?@020",
+            "shortName": "Property_Right"
+          },
+          {
+            "code": 5,
+            "name": "5=56=K5 B@51>20=8O",
+            "shortName": "Money_Claim"
+          },
+          {
+            "code": 6,
+            "name": "=>5 8<CI5AB2>",
+            "shortName": "Other_Property"
+          },
+          {
+            "code": 7,
+            "name": "518B>@A:0O 704>;65==>ABL",
+            "shortName": "Receivables"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "listItem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ListItem"
+          }
+        }
+      },
+      "required": [
+        "listItem"
       ]
     }
   },
