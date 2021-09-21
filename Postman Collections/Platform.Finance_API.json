@@ -65,6 +65,7 @@
             "description": "OK",
             "schema": {
               "type": "array",
+              "default": "",
               "items": {
                 "$ref": "#/definitions/fund"
               }
@@ -685,6 +686,7 @@
             "description": "OK",
             "schema": {
               "type": "array",
+              "default": "",
               "items": {
                 "$ref": "#/definitions/~1api~1External~1fund~1959~1nav"
               }
@@ -1233,6 +1235,7 @@
             "description": "OK",
             "schema": {
               "type": "array",
+              "default": "",
               "items": {
                 "$ref": "#/definitions/company"
               }
